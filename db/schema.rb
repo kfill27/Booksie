@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150516175251) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "child_users", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "child_id"
@@ -21,8 +24,8 @@ ActiveRecord::Schema.define(version: 20150516175251) do
     t.datetime "updated_at",   null: false
   end
 
-  add_index "child_users", ["child_id"], name: "index_child_users_on_child_id"
-  add_index "child_users", ["user_id"], name: "index_child_users_on_user_id"
+  add_index "child_users", ["child_id"], name: "index_child_users_on_child_id", using: :btree
+  add_index "child_users", ["user_id"], name: "index_child_users_on_user_id", using: :btree
 
   create_table "children", force: :cascade do |t|
     t.string   "name"
@@ -39,8 +42,8 @@ ActiveRecord::Schema.define(version: 20150516175251) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "group_users", ["group_id"], name: "index_group_users_on_group_id"
-  add_index "group_users", ["user_id"], name: "index_group_users_on_user_id"
+  add_index "group_users", ["group_id"], name: "index_group_users_on_group_id", using: :btree
+  add_index "group_users", ["user_id"], name: "index_group_users_on_user_id", using: :btree
 
   create_table "groups", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -57,4 +60,8 @@ ActiveRecord::Schema.define(version: 20150516175251) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "child_users", "children"
+  add_foreign_key "child_users", "users"
+  add_foreign_key "group_users", "groups"
+  add_foreign_key "group_users", "users"
 end
