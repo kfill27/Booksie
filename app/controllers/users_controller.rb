@@ -6,7 +6,10 @@ class UsersController < ApplicationController
   end
 
   def profile
-    @user = User.find_by(name: params[:name].capitalize)
+    @username = User.find_by(username: params[:username].capitalize)
   end
 
+  # def username
+  #   @name = first_name + last_name
+  # end
 end
