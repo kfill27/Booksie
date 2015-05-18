@@ -1,12 +1,19 @@
 class UsersController < ApplicationController
   # before_action :check_invites, only: :profile
+  before_action :authenticate_user!, except: [:landing]
 
   def landing
     @users = User.all
   end
 
   def profile
-    @user = User.find_by(username: params[:username].downcase)
+    @user = User.find_by(username: params[:username])
+    if user_signed_in?
+      render 'profile'
+    else
+    end
+
+
     if @user.nil?
       @users = User.all
       flash.now[:alert] = "Your Booksie was not found"
@@ -23,7 +30,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
         flash[:success] = "Welcome to Booksie!"
-        render 'profile'
+        redirect_to profile_path
       else
         render 'new'
       end

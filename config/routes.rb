@@ -2,10 +2,23 @@ Rails.application.routes.draw do
 
 
   devise_for :users
+  devise_scope :user do
+    authenticated :user do
+      root 'users#profile', as: :authenticated_root
+    end
 
-  root 'users#landing'
+    unauthenticated do
+      root 'users#landing', as: :unauthenticated_root
+    end
+  end
 
-  get 'profile/:username' => 'users#profile', as: :profile
+
+  # root 'users#profile'
+  # get 'profile/:username' => 'users#profile', as: :profile
+
+  # get  'landing' => 'users#landing'
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
