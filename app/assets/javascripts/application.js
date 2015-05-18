@@ -14,3 +14,13 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+// $(document).ready(function() {
+
+//   $('#btnLinkCreate').click(function(e){
+//     e.preventDefault();
+//     $('#createNewTextbox').append('<input type= "email" id="email" name="user[email][]" placeholder="Invitation email" required/>');
+// });
+
+// })

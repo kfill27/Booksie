@@ -13,10 +13,12 @@ Rails.application.routes.draw do
   end
 
 
-  # root 'users#profile'
-  # get 'profile/:username' => 'users#profile', as: :profile
 
-  # get  'landing' => 'users#landing'
+
+  root 'users#profile'
+  get 'profile/:username' => 'users#profile', as: :profile
+
+  get  'landing' => 'users#landing'
 
 
 
