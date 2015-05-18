@@ -6,10 +6,11 @@ class UsersController < ApplicationController
   end
 
   def profile
-    @username = User.find_by(username: params[:username].capitalize)
-  end
+    @user = User.find_by(name: params[:name].capitalize)
+   end
 
-  # def username
-  #   @name = first_name + last_name
-  # end
+# protected
+#    def after_sign_in_path_for(resource)
+#      user_path(current_user) profile
+#    end
 end

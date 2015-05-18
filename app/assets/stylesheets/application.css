@@ -13,3 +13,75 @@
  *= require_tree .
  *= require_self
  */
+
+ /*Booksie Colors:
+ yellow: #D8B244
+ red: #EC523B
+ teal: #37AAA0
+ gray: #6E7070
+ */
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nixie One';
+ }
+
+ p, body {
+  font-family: 'Lato', sans-serif;
+ }
+
+ #logo {
+  color: #EC523B;
+  font-size: 30px;
+ }
+
+ h1 {
+  text-align: center;
+ }
+/*   Header   */
+.navbar {
+  margin-bottom: 0px;
+ }
+/*   Jumbotron   */
+ .jumbotron {
+    height: 500px;
+    background: url(congruent_pentagon.png);
+    background-size: cover;
+ }
+
+ input {
+  width: 100%;
+ }
+
+ input#user_first_name, input#user_last_name {
+  width: 100%;
+ }
+
+ .btn {
+  background-color: #37AAA0;
+  color: #fff;
+  border: none;
+  padding: 15px;
+ }
+/*   Supporting Area   */
+
+.supporting h1 {
+  margin-bottom: 30px;
+}
+
+.supporting p {
+  padding: 30px 0px;
+}
+
+/*   Testimonials   */
+
+
+
+/*   Footer   */
+.footer {
+  height: 100px;
+  background-color: #6E7070;
+}
+
+
+/*media query for jumbotron height > 500px: small & xs screen size*/
