@@ -13,12 +13,12 @@ class UsersController < ApplicationController
     else
       #no code here?
     end
-    if @user.nil?
-      @users = User.all
-      flash.now[:alert] = "Your Booksie was not found"
-      render 'landing'
-    end
-  end
+  #   if @user.nil?
+  #     @users = User.all
+  #     flash.now[:alert] = "Your Booksie was not found"
+  #     # render 'landing'
+  #   end
+  # end
 
   def new
     @user = User.new
