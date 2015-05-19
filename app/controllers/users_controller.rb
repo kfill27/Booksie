@@ -11,9 +11,8 @@ class UsersController < ApplicationController
     if user_signed_in?
       render 'profile'
     else
+      #no code here?
     end
-
-
     if @user.nil?
       @users = User.all
       flash.now[:alert] = "Your Booksie was not found"
@@ -29,19 +28,16 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-        flash[:success] = "Welcome to Booksie!"
-        redirect_to profile_path
-      else
-        render 'new'
-      end
+      flash[:success] = "Welcome to Booksie!"
+      redirect_to profile_path
+    else
+      render 'new'
+    end
   end
-
-
 
 private
  def user_params
   params.require(:user).permit(:first_name, :last_name, :username, :email, :password)
   end
-
 end
 

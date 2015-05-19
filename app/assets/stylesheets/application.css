@@ -83,5 +83,14 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #6E7070;
 }
 
+/*  Profile Page */
+
+.add-media-section {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.media-button {
+
+}
 
 /*media query for jumbotron height > 500px: small & xs screen size*/
