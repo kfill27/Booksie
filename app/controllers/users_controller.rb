@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   #     flash.now[:alert] = "Your Booksie was not found"
   #     # render 'landing'
   #   end
-  # end
+  end
 
   def new
     @user = User.new
