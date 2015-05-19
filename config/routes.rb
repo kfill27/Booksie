@@ -19,6 +19,9 @@ Rails.application.routes.draw do
   get 'profile/:username' => 'users#profile', as: :profile
 
   get  'landing' => 'users#landing'
+  get 'settings' => 'users#settings'
+
+  get 'index' => 'children#index'
 
 
 

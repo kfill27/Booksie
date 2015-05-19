@@ -10,14 +10,11 @@ class UsersController < ApplicationController
     @user = User.find_by(username: params[:username])
     if user_signed_in?
       render 'profile'
-    else
-      #no code here?
     end
-  #   if @user.nil?
-  #     @users = User.all
-  #     flash.now[:alert] = "Your Booksie was not found"
-  #     # render 'landing'
-  #   end
+  end
+
+  def settings
+
   end
 
   def new
@@ -37,7 +34,7 @@ class UsersController < ApplicationController
 
 private
  def user_params
-  params.require(:user).permit(:first_name, :last_name, :username, :email, :password)
+  params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :role)
   end
 end
 
