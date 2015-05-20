@@ -14,7 +14,6 @@ class UsersController < ApplicationController
   end
 
   def settings
-
   end
 
   def new
@@ -24,9 +23,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      log_in @user    
+      log_in @user
       flash[:success] = "Welcome to Booksie!"
-  
     else
       render 'new'
     end
@@ -37,4 +35,3 @@ private
   params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :role)
   end
 end
-
