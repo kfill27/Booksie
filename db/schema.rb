@@ -11,16 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150520194112) do
+ActiveRecord::Schema.define(version: 20150520203712) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "abilities", force: :cascade do |t|
     t.string   "role"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "user_id"
+    t.integer  "booksie_page_id"
   end
+
+  add_index "abilities", ["booksie_page_id"], name: "index_abilities_on_booksie_page_id", using: :btree
+  add_index "abilities", ["user_id"], name: "index_abilities_on_user_id", using: :btree
 
   create_table "booksie_pages", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -95,6 +100,8 @@ ActiveRecord::Schema.define(version: 20150520194112) do
   add_index "users", ["invited_by_id"], name: "index_users_on_invited_by_id", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "abilities", "booksie_pages"
+  add_foreign_key "abilities", "users"
   add_foreign_key "child_users", "children"
   add_foreign_key "child_users", "users"
   add_foreign_key "group_users", "groups"
