@@ -24,9 +24,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      log_in @user
+      log_in @user    
       flash[:success] = "Welcome to Booksie!"
-      redirect_to profile_path
+  
     else
       render 'new'
     end
