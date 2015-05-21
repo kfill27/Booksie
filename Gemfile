@@ -3,6 +3,7 @@ gem 'rails_12factor'
 gem 'devise'
 gem 'devise_invitable'
 gem "paperclip", "~> 4.2"
+gem 'aws-sdk-v1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
