@@ -15,6 +15,9 @@ class PhotosController < ApplicationController
   # GET /photos/new
   def new
     @photo = Photo.new
+
+    # @users_array = []
+    # BooksiePage.users
     # current_user.booksie_page_id
     # @booksie = BooksiePage.find(1)
   end

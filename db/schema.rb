@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150522010319) do
+ActiveRecord::Schema.define(version: 20150522135903) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,18 +28,18 @@ ActiveRecord::Schema.define(version: 20150522010319) do
   add_index "abilities", ["user_id"], name: "index_abilities_on_user_id", using: :btree
 
   create_table "booksie_pages", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.string   "image"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "booksie_page_id"
   end
 
-  add_index "booksie_pages", ["booksie_page_id"], name: "index_booksie_pages_on_booksie_page_id", using: :btree
-
-  create_table "photos", force: :cascade do |t|
-    t.string   "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+  add_index "photos", ["booksie_page_id"], name: "index_photos_on_booksie_page_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -77,5 +77,5 @@ ActiveRecord::Schema.define(version: 20150522010319) do
 
   add_foreign_key "abilities", "booksie_pages"
   add_foreign_key "abilities", "users"
-  add_foreign_key "booksie_pages", "booksie_pages"
+  add_foreign_key "photos", "booksie_pages"
 end
