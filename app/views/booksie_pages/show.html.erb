@@ -31,7 +31,7 @@
               <h4 class="modal-title" id="myModalLabel">Modal title</h4>
             </div>
             <div class="modal-body">
-              ...
+
             </div>
             <div class="modal-footer">
             </div>
@@ -97,4 +97,13 @@
 </div>
 <%= link_to "Invite Friends", new_user_invitation_path %>
 
+
+<%= form_for make_photos_path, :html => { :multipart => true } do |f| %>
+  <%= f.text_field :caption %>
+  <%= f.file_field :image %>
+
+  <%= f.submit %>
+<% end %>
+
+<%# link_to image_tag(@post.image.url(:med)), @post.image.url %>
 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resource :booksie_pages
   devise_for :users
   devise_scope :user do
     authenticated :user do
@@ -9,9 +10,14 @@ Rails.application.routes.draw do
     end
   end
   root 'booksie_page#show'
-  # get 'profile/:username' => 'users#profile', as: :profile
   get 'landing' => 'users#landing'
   get 'settings' => 'users#settings'
+  # get 'create' => 'photos#create'
+  # get 'show' => 'photos#show'
+  post 'booksie_pages', to: 'booksie_pages#make_photo', as: :make_photo
+
+  resources :photos
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

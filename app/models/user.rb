@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
 
   private
   def create_booksie_page
+    puts"******************"
     booksie = self.booksie_pages.create
     Ability.find_by(user: self, booksie_page: booksie).update(role: "admin")
   end
