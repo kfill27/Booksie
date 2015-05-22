@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 gem 'rails_12factor'
 gem 'devise'
 gem 'devise_invitable'
-gem "paperclip", "~> 4.2"
+gem 'rmagick'
+gem 'carrierwave'
 gem 'aws-sdk-v1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

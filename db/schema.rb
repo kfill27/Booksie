@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150520203712) do
+ActiveRecord::Schema.define(version: 20150522010319) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,41 +28,15 @@ ActiveRecord::Schema.define(version: 20150520203712) do
   add_index "abilities", ["user_id"], name: "index_abilities_on_user_id", using: :btree
 
   create_table "booksie_pages", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "booksie_page_id"
   end
 
-  create_table "child_users", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "child_id"
-    t.string   "relationship"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
+  add_index "booksie_pages", ["booksie_page_id"], name: "index_booksie_pages_on_booksie_page_id", using: :btree
 
-  add_index "child_users", ["child_id"], name: "index_child_users_on_child_id", using: :btree
-  add_index "child_users", ["user_id"], name: "index_child_users_on_user_id", using: :btree
-
-  create_table "children", force: :cascade do |t|
-    t.string   "name"
-    t.date     "birthday"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "group_users", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "group_id"
-    t.datetime "owner"
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "group_users", ["group_id"], name: "index_group_users_on_group_id", using: :btree
-  add_index "group_users", ["user_id"], name: "index_group_users_on_user_id", using: :btree
-
-  create_table "groups", force: :cascade do |t|
+  create_table "photos", force: :cascade do |t|
+    t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -92,6 +66,7 @@ ActiveRecord::Schema.define(version: 20150520203712) do
     t.integer  "invited_by_id"
     t.string   "invited_by_type"
     t.integer  "invitations_count",      default: 0
+    t.integer  "roles_mask"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
@@ -102,8 +77,5 @@ ActiveRecord::Schema.define(version: 20150520203712) do
 
   add_foreign_key "abilities", "booksie_pages"
   add_foreign_key "abilities", "users"
-  add_foreign_key "child_users", "children"
-  add_foreign_key "child_users", "users"
-  add_foreign_key "group_users", "groups"
-  add_foreign_key "group_users", "users"
+  add_foreign_key "booksie_pages", "booksie_pages"
 end
