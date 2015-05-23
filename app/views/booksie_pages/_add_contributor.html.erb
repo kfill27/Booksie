@@ -1,4 +1,10 @@
-<%= form_tag contributor_path, method: 'get' do %>
+
+<div class="container add-users">
+<h2>Add people who can view and contribute to your page</h2>
+  <%= form_tag contributor_path, method: 'get' do %>
     <%= text_field_tag :email, params[:email] %>
     <%= submit_tag "Add Contributor", name: nil %>
-<% end %>
+  <% end %>
+
+  <%= link_to "Invite Friends", new_user_invitation_path %> <br>
+</div>

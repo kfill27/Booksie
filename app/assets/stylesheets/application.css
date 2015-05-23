@@ -93,4 +93,12 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+.add-users {
+  padding: 30px;
+}
+
+.upload-button {
+  padding: 20px;
+}
+
 /*media query for jumbotron height > 500px: small & xs screen size*/

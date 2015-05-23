@@ -2,26 +2,43 @@
 <div class="container add-media-section">
   <div class="row">
     <div class="col-md-4 col-xs-4 text-center">
-    <a href="#" class="media-button" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil fa-3x"></i></a>
+    <a href="#" class="media-button" data-toggle="modal" data-target="#myModal"><i class="fa fa-camera fa-3x"></i></a>
       <!-- Modal Text Upload -->
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              <h4 class="modal-title" id="myModalLabel">Choose photo to upload:</h4>
             </div>
             <div class="modal-body">
-              ...
-            </div>
+              <div class="photo-form">
+                <%= form_for(Photo.new) do |f| %>
+                  <%# if @photo.errors.any? %>
+                    <!-- <div id="error_explanation"> -->
+                      <!-- <h2><%# pluralize(@photo.errors.count, "error") %> prohibited this photo from being saved:</h2> -->
+                      <ul class="list-unstyled">
+                       <%# @photo.errors.full_messages.each do |message| %>
+                        <li><%#= message %></li>
+                      <%# end %>
+                      </ul>
+                    </div>
+                    <div class="upload-button text-center">
+                      <%= f.file_field :image %>
+                    </div>
+                    <div class="actions">
+                      <%= f.submit "Upload Photo", class: "btn btn-default" %>
+                    </div>
+                <% end %>
+                </div>
+              </div><!--
             <div class="modal-footer">
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
-    </div>
     <div class="col-md-4 col-xs-4 text-center">
-    <a href="#" class="media-button" data-toggle="modal" data-target="#myModal"><i class="fa fa-camera fa-3x"></i></a>
+    <a href="#" class="media-button" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil fa-3x"></i></a>
       <!-- Modal Photo Upload-->
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -95,5 +112,5 @@
     </p>
   </div>
 </div>
-<%= link_to "Invite Friends", new_user_invitation_path %> <br>
+
 <%= render 'add_contributor' %>
