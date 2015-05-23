@@ -5,6 +5,7 @@ class BooksiePagesController < ApplicationController
 
 	def show
     @booksie_page = current_user.check_if_owner(params[:id])
+    @photos = Photo.all
 	end
 
 	def new
