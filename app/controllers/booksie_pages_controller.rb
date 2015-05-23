@@ -1,9 +1,10 @@
 class BooksiePagesController < ApplicationController
 	def index
-		@booksie_page = current_user.booksie_pages.all
+		@booksie_pages = current_user.booksie_pages
 	end
 
 	def show
+    @booksie_page = current_user.check_if_owner(params[:id])
 	end
 
 	def new

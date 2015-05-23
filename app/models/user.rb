@@ -8,9 +8,21 @@ class User < ActiveRecord::Base
   has_many :booksie_pages, through: :abilities
   after_create :create_booksie_page
 
+  def check_if_owner(booksie_id)
+    booksie_id.nil? ? self.booksie_page : BooksiePage.find(booksie_id)
+  end
+
+  def booksie_page
+    self.abilities.find_by(role: "owner").booksie_page
+  end
+
+  def contribute_pages
+    self.abilities.where(role: "contributor").map(&:booksie_page)
+  end
+
   private
   def create_booksie_page
     booksie = self.booksie_pages.create
-    Ability.find_by(user: self, booksie_page: booksie).update(role: "admin")
+    Ability.find_by(user: self, booksie_page: booksie).update(role: "owner")
   end
 end

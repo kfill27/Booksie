@@ -13,6 +13,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def contributor
+    contributor = User.find_by(email: params[:email])
+    Ability.create(role: 'contributor', user: contributor, booksie_page: current_user.booksie_page)
+    if contributor.nil?
+      flash[:notice] = "User not found."
+    else
+      flash[:notice] = "Added #{contributor.email} as a contributor"
+    end
+    redirect_to :back
+  end
+
   def settings
   end
 
