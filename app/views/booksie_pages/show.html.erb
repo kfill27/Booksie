@@ -74,36 +74,29 @@
         </div>
       </div>
     </div>
-    </div>
   </div>
 </div>
+</div>
 <hr>
-<div class="container">
-  <div class="col-md-8">
+<div class="">
+  <div class="container col-md-8">
     <ul class ="list-inline list-unstyled">
         <li><h2>All</h2></li>|
         <li><h2>Child 1</h2></li>|
         <li><h2>Child 2</h2></li>
     </ul>
+      <div class="row">
+        <% @photos.each do |photo| %>
+         <div class="col-md-3 col-xs-6">
+        <%= image_tag photo.image_url(:thumb) %>
+         </div>
+        <% end %>
+    </div>
   </div>
+</div>
   <div class="col-md-4">
     <h2 class="text-center">Milestones & Memories</h2>
-  </div>
-  <div class="thumnails col-md-8">
-    <table>
-      <tbody>
-        <% @photos.each do |photo| %>
-          <tr>
-            <td><%= image_tag(photo.image) %></td>
-            <td><%= link_to 'Show', photo %></td>
-            <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-            <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-  </div>
-  <div class="memories-milestones col-md-4">
+    <div class="memories-milestones">
     <p>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>

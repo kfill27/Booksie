@@ -4,6 +4,7 @@ gem 'devise'
 gem 'devise_invitable'
 gem 'rmagick'
 gem 'carrierwave'
+gem 'mini_magick', '~> 4.2.4'
 gem 'aws-sdk-v1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
