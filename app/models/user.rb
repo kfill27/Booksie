@@ -6,19 +6,21 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :abilities, dependent: :destroy
   has_many :booksie_pages, through: :abilities
+  has_many :photos, through: :booksie_pages
   after_create :create_booksie_page
 
   def check_if_owner(booksie_page_id)
     booksie_page_id.nil? ? self.booksie_page : BooksiePage.find(booksie_page_id)
   end
 
-  def booksie_page
+  def booksie_page #my_booksie_page
     self.abilities.find_by(role: "owner").booksie_page
   end
 
   def contribute_pages
     self.abilities.where(role: "contributor").map(&:booksie_page)
   end
+
 
   private
   def create_booksie_page
