@@ -8,8 +8,8 @@ class User < ActiveRecord::Base
   has_many :booksie_pages, through: :abilities
   after_create :create_booksie_page
 
-  def check_if_owner(booksie_id)
-    booksie_id.nil? ? self.booksie_page : BooksiePage.find(booksie_id)
+  def check_if_owner(booksie_page_id)
+    booksie_page_id.nil? ? self.booksie_page : BooksiePage.find(booksie_page_id)
   end
 
   def booksie_page

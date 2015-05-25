@@ -12,7 +12,7 @@
   <tbody>
     <% @videos.each do |video| %>
       <tr>
-        <td><%= image_tag(video.video) %></td>
+        <td><%= video.video.url %></td>
 
         <td><%= link_to 'Show', video %></td>
         <td><%= link_to 'Edit', edit_video_path(video) %></td>
