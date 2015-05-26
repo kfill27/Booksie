@@ -1,0 +1,17 @@
+<hr>
+<div class="">
+  <div class="container col-md-8">
+    <ul class ="list-inline list-unstyled">
+        <li><h2>All</h2></li>|
+        <li><h2>Child 1</h2></li>|
+        <li><h2>Child 2</h2></li>
+    </ul>
+      <div class="row">
+        <% @photos.each do |photo| %>
+         <div class="col-md-3 col-sm-4 col-xs-6">
+        <%= image_tag photo.image_url(:thumb) %>
+         </div>
+        <% end %>
+    </div>
+  </div>
+</div>

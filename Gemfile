@@ -7,6 +7,8 @@ gem 'carrierwave'
 gem 'mini_magick', '~> 4.2.4'
 gem 'aws-sdk-v1'
 gem 'carrierwave-video'
+# gem "fog-aws"
+gem 'acts_as_taggable', '~> 2.0.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
