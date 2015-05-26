@@ -30,7 +30,7 @@ class CommentsController < ApplicationController
 
     if @comment.save
       flash[:notice] = "Successfully created comment."
-      redirect_to :id => nil
+      redirect_to :back
     else
       render :action => 'new'
     end
@@ -53,7 +53,7 @@ class CommentsController < ApplicationController
   # DELETE /comments/1
   # DELETE /comments/1.json
   def destroy
-    @commentable.destroy
+    @comment.destroy
     respond_to do |format|
       format.html { redirect_to comments_url, notice: 'Comment was successfully destroyed.' }
       format.json { head :no_content }
