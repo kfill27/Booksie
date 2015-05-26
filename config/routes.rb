@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  resources :photos
+  resources :videos
+  resources :milestones
+
+
   concern :commentable do
     resources :comments
   end
@@ -7,6 +12,7 @@ Rails.application.routes.draw do
 
   resources :photos, concerns: :commentable
   resources :videos, concerns: :commentable
+
 
   devise_for :users
   devise_scope :user do

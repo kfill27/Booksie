@@ -41,6 +41,13 @@ ActiveRecord::Schema.define(version: 20150526135506) do
     t.datetime "updated_at",       null: false
   end
 
+  create_table "milestones", force: :cascade do |t|
+    t.text     "post"
+    t.date     "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "photos", force: :cascade do |t|
     t.string   "image"
     t.datetime "created_at",      null: false
