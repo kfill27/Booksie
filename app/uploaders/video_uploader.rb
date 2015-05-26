@@ -2,6 +2,7 @@
 
 class VideoUploader < CarrierWave::Uploader::Base
   include CarrierWave::Video
+  include CarrierWave::Video::Thumbnailer
 
   process encode_video: [:mp4, callbacks: { after_transcode: :set_success } ]
 
@@ -43,7 +44,7 @@ class VideoUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   # version :thumb do
-  #   process :resize_to_fit => [50, 50]
+  #   process :resize_to_fit => [200, 200]
   # end
 
   # Add a white list of extensions which are allowed to be uploaded.
@@ -57,5 +58,16 @@ class VideoUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+
+    version :thumb do
+    process thumbnail: [{format: 'png', quality: 10, size: 200, strip: true, logger: Rails.logger}]
+    def full_filename for_file
+      png_name for_file, version_name
+    end
+  end
+
+  def png_name for_file, version_name
+    %Q{#{version_name}_#{for_file.chomp(File.extname(for_file))}.png}
+  end
 
 end
