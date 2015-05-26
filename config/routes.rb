@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :photos
   resources :videos
+  resources :milestones
   devise_for :users
   devise_scope :user do
     authenticated :user do
