@@ -7,6 +7,7 @@ gem 'carrierwave'
 gem 'mini_magick', '~> 4.2.4'
 gem 'aws-sdk-v1'
 gem 'carrierwave-video'
+gem 'carrierwave-video-thumbnailer'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
