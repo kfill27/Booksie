@@ -25,3 +25,11 @@
 <br>
 
 <%= link_to 'New Video', new_video_path %>
+
+<div class="row">
+        <% @videos.each do |video| %>
+         <div class="col-md-3 col-sm-4 col-xs-6">
+        <%= video_tag video.video_url(:thumb) %>
+         </div>
+        <% end %>
+    </div>
