@@ -9,7 +9,9 @@
       <div class="row">
         <% @photos.each do |photo| %>
          <div class="col-md-3 col-sm-4 col-xs-6">
-        <%= image_tag photo.image_url(:thumb) %>
+        <%= link_to image_tag photo.image_url(:thumb) %>
+        <%= link_to 'Show', photo %>
+        <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
          </div>
         <% end %>
     </div>
