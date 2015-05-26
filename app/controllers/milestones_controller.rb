@@ -75,7 +75,7 @@ before_action :set_milestone, only: [:show, :edit, :update, :destroy]
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def milestone_params
-      params.require(:milestone).permit(:post, :date)
+      params.require(:milestone).permit(:date, :post, :booksie_page_id)
     end
 
 end
