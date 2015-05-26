@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
  }
 /*   Jumbotron   */
  .jumbotron {
-    height: 500px;
+    height: 400px;
     background: url(congruent_pentagon.png);
     background-size: cover;
     background-attachment: fixed;
@@ -97,8 +97,8 @@ h1, h2, h3, h4, h5, h6 {
 /*  Profile Page */
 
 .add-media-section {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .fa-3x {
@@ -112,6 +112,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 200px;
   border-radius: 50%;
   box-shadow: -2px 1px 6px 0px rgba(0,0,0,0.75);
+  margin: 0 auto;
 }
 
 img {
