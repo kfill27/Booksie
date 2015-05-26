@@ -1,6 +1,9 @@
-<p id="notice"><%= notice %></p>
-
-<%= image_tag(@photo.image.url) %>
-
-<%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Back', photos_path %>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+    <div class="individualPhoto text-center">
+      <%= image_tag(@photo.image.url) %>
+      <%= link_to 'Edit', edit_photo_path(@photo) %> |
+      <%= link_to 'Back' %>
+    </div>
+  </div>
+</div>
