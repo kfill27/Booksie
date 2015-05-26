@@ -5,7 +5,8 @@ class BooksiePagesController < ApplicationController
 
 	def show
     @booksie_page = current_user.check_if_owner(params[:id])
-    @photos = current_user.photos   
+    @photos = current_user.photos
+    @videos = current_user.videos
     @milestone = Milestone.new
 	end
 

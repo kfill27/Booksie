@@ -6,6 +6,7 @@
         <li><h2>Child 1</h2></li>|
         <li><h2>Child 2</h2></li>
     </ul>
+    <!-- Photo Gallery -->
       <div class="row">
         <% @photos.each do |photo| %>
          <div class="col-md-3 col-sm-4 col-xs-6">
@@ -13,6 +14,18 @@
           <%= image_tag photo.image_url(:thumb) %>
         <% end %>
         <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+         </div>
+        <% end %>
+    </div>
+
+    <!-- Video Gallery -->
+      <div class="row">
+        <% @videos.each do |video| %>
+         <div class="col-md-3 col-sm-4 col-xs-6">
+        <%= link_to video do %>
+          <%= video_tag(video.video.url(:thumb), controls: true) %>
+        <% end %>
+        <%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %>
          </div>
         <% end %>
     </div>

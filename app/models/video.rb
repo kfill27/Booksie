@@ -4,7 +4,6 @@ class Video < ActiveRecord::Base
   mount_uploader :video, VideoUploader
 
   def set_success(format, opts)
-    puts "Hooray!"
     #self.success = true
   end
 end
