@@ -30,6 +30,7 @@ before_action :set_milestone, only: [:show, :edit, :update, :destroy]
   # POST /milestone.json
   def create
     @milestone = Milestone.new(milestone_params)
+    @milestone.booksie_page = current_user.booksie_page
     #milestone.booksie_page_id ||=
 
     respond_to do |format|

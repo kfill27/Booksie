@@ -2,37 +2,28 @@
 	<h2>Milestones & Memories</h2>
     <ul class="timeline">
   <li><div class="tldate"></div></li>
+ 
+
+ <% @booksie_page.milestones.each do |milestone| %>
 
   <li>
     <div class="tl-circ"></div>
     <div class="timeline-panel">
       <div class="tl-heading">
+
         <% @milestones.each do |milestone| %>
         <%= @milestone.date %>
         <%= @milestone.post %>
         <% end %>
+
+        <h4><%= milestone.date %></h4>
+
         <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i></small></p>
       </div>
-      <div class="tl-body">
-        <p>Lorem Ipsum and such.</p>
-      </div>
+ <!--      <div class="tl-body">
+        <p><%= milestone.post %></p>
+      </div> -->
     </div>
   </li>
 
-  <li class="timeline-inverted">
-    <div class="tl-circ"></div>
-    <div class="timeline-panel">
-      <div class="tl-heading">
-        <h4>Most Recent Milestone goes here</h4>
-        <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>Date goes here</small></p>
-      </div>
-      <div class="tl-body">
 
-        <p>Hope the weather gets a bit nicer...</p>
-
-        <p>Y'know, with more sunlight.</p
-        <p>click on this to display</p>
-      </div>
-    </div>
-  </li>
-</div>
