@@ -2,12 +2,15 @@
 	<h2>Milestones & Memories</h2>
     <ul class="timeline">
   <li><div class="tldate"></div></li>
- 
+
   <li>
     <div class="tl-circ"></div>
     <div class="timeline-panel">
       <div class="tl-heading">
-        <h4>Surprising Headline Right Here</h4>
+        <% @milestones.each do |milestone| %>
+        <%= @milestone.date %>
+        <%= @milestone.post %>
+        <% end %>
         <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i></small></p>
       </div>
       <div class="tl-body">
@@ -15,7 +18,7 @@
       </div>
     </div>
   </li>
- 
+
   <li class="timeline-inverted">
     <div class="tl-circ"></div>
     <div class="timeline-panel">
@@ -25,7 +28,7 @@
       </div>
       <div class="tl-body">
         <p>Hope the weather gets a bit nicer...</p>
- 
+
         <p>Y'know, with more sunlight.</p>
       </div>
     </div>

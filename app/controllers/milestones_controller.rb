@@ -4,7 +4,7 @@ before_action :set_milestone, only: [:show, :edit, :update, :destroy]
   # GET /milestone
   # GET /milestone.json
   def index
-    @milestone = Milestone.all
+    @milestones = Milestone.all
   end
 
   # GET /milestone/1

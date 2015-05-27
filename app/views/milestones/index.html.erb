@@ -10,9 +10,9 @@
   </thead>
 
   <tbody>
-    <% @milestone.each do |milestone| %>
+    <% @milestones.each do |milestone| %>
       <tr>
-        <td><%= text_field_tag(:post) %></td> 
+        <td><%= text_field_tag(:post) %></td>
         <td><%= date_field_tag(:date) %></td>
         <td><%= link_to 'Show', milestone %></td>
         <td><%= link_to 'Edit', edit_milestone_path(milestone) %></td>
