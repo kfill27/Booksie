@@ -54,7 +54,7 @@
               <h4 class="modal-title" id="myTextModalLabel">Share Milestone or Memory</h4>
                 </div>
                 <div class="modal-body">
-                <%= form_for(@milestone) do |f| %>
+                <%= form_for(Milestone.new) do |f| %>
                 <ul class="list-unstyled">
                   <li><%= f.date_field :date %></li>
                   <li><%= f.label "Enter your milestone..." %></li>

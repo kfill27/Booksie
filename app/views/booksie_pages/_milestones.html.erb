@@ -7,7 +7,10 @@
     <div class="tl-circ"></div>
     <div class="timeline-panel">
       <div class="tl-heading">
-        <h4>Surprising Headline Right Here</h4>
+        <% @milestones.each do |milestone| %>
+        <%= @milestone.date %>
+        <%= @milestone.post %>
+        <% end %>
         <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i></small></p>
       </div>
       <div class="tl-body">

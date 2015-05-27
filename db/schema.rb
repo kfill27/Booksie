@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150526135506) do
+ActiveRecord::Schema.define(version: 20150527204835) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,9 +44,12 @@ ActiveRecord::Schema.define(version: 20150526135506) do
   create_table "milestones", force: :cascade do |t|
     t.text     "post"
     t.date     "date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "booksie_page_id"
   end
+
+  add_index "milestones", ["booksie_page_id"], name: "index_milestones_on_booksie_page_id", using: :btree
 
   create_table "photos", force: :cascade do |t|
     t.string   "image"
@@ -101,6 +104,7 @@ ActiveRecord::Schema.define(version: 20150526135506) do
 
   add_foreign_key "abilities", "booksie_pages"
   add_foreign_key "abilities", "users"
+  add_foreign_key "milestones", "booksie_pages"
   add_foreign_key "photos", "booksie_pages"
   add_foreign_key "videos", "booksie_pages"
 end
