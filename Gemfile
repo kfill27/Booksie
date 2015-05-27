@@ -7,7 +7,7 @@ gem 'carrierwave'
 gem 'mini_magick', '~> 4.2.4'
 gem 'aws-sdk-v1'
 gem 'carrierwave-video'
-# gem "fog-aws"
+gem "fog-aws"
 gem 'acts_as_taggable', '~> 2.0.2'
 gem 'carrierwave-video-thumbnailer'
 
