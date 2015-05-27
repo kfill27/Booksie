@@ -3,29 +3,20 @@
     <ul class="timeline">
   <li><div class="tldate"></div></li>
  
+
+ <% @booksie_page.milestones.each do |milestone| %>
   <li>
     <div class="tl-circ"></div>
     <div class="timeline-panel">
       <div class="tl-heading">
-        <h4>Surprising Headline Right Here</h4>
+        <h4><%= milestone.date %></h4>
         <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i></small></p>
       </div>
       <div class="tl-body">
-        <p>Lorem Ipsum and such.</p>
+        <p><%= milestone.post %></p>
       </div>
     </div>
   </li>
+  <% end %>
  
-  <li class="timeline-inverted">
-    <div class="tl-circ"></div>
-    <div class="timeline-panel">
-      <div class="tl-heading">
-        <h4>Most Recent Milestone goes here</h4>
-        <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>Date goes here</small></p>
-      </div>
-      <div class="tl-body">
-        <p>click on this to display</p>
-      </div>
-    </div>
-  </li>
 </div>

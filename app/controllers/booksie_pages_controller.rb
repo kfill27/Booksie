@@ -3,8 +3,15 @@ class BooksiePagesController < ApplicationController
 		@booksie_pages = current_user.booksie_pages
 	end
 
+  def dashboard
+  # will show my personal booksie, the def show will show a booksie
+    render :show
+  end
+
 	def show
-    @booksie_page = current_user.check_if_owner(params[:id])
+    # TODO REFACTOR
+    @booksie_page = params[:id] ? BooksiePage.find(params[:id]) : current_user.booksie_pages.first
+    # @booksie_page = current_user.check_if_owner(params[:id])
     @photos = current_user.photos   
     @milestone = Milestone.new
 	end
