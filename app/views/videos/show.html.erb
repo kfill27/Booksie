@@ -1,6 +1,33 @@
+<%= render 'layouts/header' %>
+<div class="container">
 <p id="notice"><%= notice %></p>
+<div class="text-center">
+  <%= video_tag(@video.video.url, controls: true) %>
+  <p><%= link_to 'Back', :back %></p>
+</div>
 
-<%= video_tag(@video.video.url, controls: true) %>
-
-<%= link_to 'Edit', edit_video_path(@video) %> |
-<%= link_to 'Back', videos_path %>
+<div class="comment-form">
+  <%= form_for [@video, Comment.new] do |f| %>
+    <p>
+      <%= f.label "Leave a Comment..." %><br />
+      <%= f.text_area :content, :cols => "100", :rows => "5" %>
+    </p>
+      <p><%= f.submit "Submit Comment", :class => 'btn btn-default comment-btn' %></p>
+    <% end %>
+</div>
+<div class="comments-list">
+    <% @video.comments.each do |comment| %>
+      <div>
+        <hr>
+        <strong><%= comment.user_name %></strong>
+        <div>
+          <%= comment.content %>
+          <%= link_to comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' }, :class => 'comment-content' do %>
+          <i class="fa fa-times pull-right"></i>
+        <% end %>
+        <hr>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

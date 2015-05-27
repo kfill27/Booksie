@@ -4,10 +4,10 @@
 <!-- Photo Upload  -->
     <div class="col-md-4 col-xs-4 text-center">
       <div class="circle">
-        <a href="#" data-toggle="modal" data-target="#myPhotoModal"><i class="fa fa-camera fa-3x"></i></a>
+        <a href="#" data-toggle="modal" data-target="#myPhotoModal"><i class="fa fa-camera fa-5x"></i></a>
       </div>
       <!-- Modal Upload -->
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal fade" id="myPhotoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -18,20 +18,20 @@
               <div class="photo-form">
                 <%= form_for(Photo.new) do |f| %>
                   <%# if @photo.errors.any? %>
-                    <!-- <div id="error_explanation"> -->
-                      <!-- <h2><%# pluralize(@photo.errors.count, "error") %> prohibited this photo from being saved:</h2> -->
-                      <ul class="list-unstyled">
-                       <%# @photo.errors.full_messages.each do |message| %>
-                        <li><%#= message %></li>
-                      <%# end %>
-                      </ul>
-                    </div>
-                    <div class="upload-button text-center">
-                      <%= f.file_field :image %>
-                    </div>
-                    <div class="actions">
-                      <%= f.submit "Upload Photo", class: "btn btn-default" %>
-                    </div>
+                  <!-- <div id="error_explanation"> -->
+                  <!-- <h2><%# pluralize(@photo.errors.count, "error") %> prohibited this photo from being saved:</h2> -->
+                  <ul class="list-unstyled">
+                  <%# @photo.errors.full_messages.each do |message| %>
+                  <li><%#= message %></li>
+                  <%# end %>
+                  </ul>
+              </div>
+                <div class="upload-button text-center">
+                 <%= f.file_field :image %>
+                </div>
+                <div class="actions">
+                  <%= f.submit "Upload Photo", class: "btn btn-default" %>
+                </div>
                 <% end %>
                 </div>
               </div>
@@ -43,7 +43,7 @@
 <!-- Milestone Upload  -->
     <div class="col-md-4 col-xs-4 text-center">
       <div class="circle">
-        <a href="#" data-toggle="modal" data-target="#myTextModal"><i class="fa fa-pencil fa-3x"></i></a>
+        <a href="#" data-toggle="modal" data-target="#myTextModal"><i class="fa fa-pencil fa-5x"></i></a>
       </div>
       <!-- Modal Text Upload-->
       <div class="modal fade" id="myTextModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -70,7 +70,7 @@
 <!-- Video Upload  -->
     <div class="col-md-4 col-xs-4 text-center">
       <div class="circle">
-        <a href="#" data-toggle="modal" data-target="#myVideoModal"><i class="fa fa-video-camera fa-3x"></i></a>
+        <a href="#" data-toggle="modal" data-target="#myVideoModal"><i class="fa fa-video-camera fa-5x"></i></a>
       </div>
     <!-- Modal Video Upload-->
     <div class="modal fade" id="myVideoModal" tabindex="-1" role="dialog" aria-labelledby="myVideoModalLabel" aria-hidden="true">

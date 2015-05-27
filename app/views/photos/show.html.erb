@@ -1,36 +1,39 @@
+<%= render 'layouts/header' %>
 <div class="container">
   <p id="notice"><%= notice %></p>
     <div class="individualPhoto text-center">
-      <%= image_tag(@photo.image.url) %>
-      <%= link_to 'Edit', edit_photo_path(@photo) %> |
-      <%= link_to 'Back' %>
+      <%= image_tag(@photo.image.url, :class => "showImage") %>
+      <p>
+        <%= link_to 'Back' %>
+      </p>
+    </div>
+    <div class="comments">
+      <hr>
+      <h2>Comments</h2>
+      <hr>
+      <div class="comment-form">
+      <%= form_for [@photo, Comment.new] do |f| %>
+          <p>
+            <%= f.label "Leave a Comment..." %><br />
+            <%= f.text_area :content, :cols => "100", :rows => "5" %>
+          </p>
+          <p><%= f.submit "Submit Comment", :class => 'btn btn-default comment-btn' %></p>
+        <% end %>
+      </div>
+      <div class="comments-list">
+        <% @photo.comments.each do |comment| %>
+          <div>
+            <hr>
+            <strong><%= comment.user_name %></strong>
+            <div>
+              <%= comment.content %>
+              <%= link_to comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' }, :class => 'comment-content' do %>
+              <i class="fa fa-times pull-right"></i>
+            <% end %>
+            <hr>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
-
-<p id="notice"><%= notice %></p>
-
-<%= image_tag(@photo.image.url) %>
-
-<h2>Comments</h2>
-<%= form_for [@photo, Comment.new] do |f| %>
-    <p>
-      <%= f.label :content %><br />
-      <%= f.text_area :content %>
-    </p>
-    <p><%= f.submit "Submit" %></p>
-  <% end %>
-
-  <% @photo.comments.each do |comment| %>
-    <div>
-      <strong><%= comment.user_name %></strong>
-      <br />
-      <p><%= comment.content %></p>
-      <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
-    </div>
-  <% end %>
-
-
-<%# link_to 'Edit', edit_photo_path(@photo) %> |
-<%# link_to 'Back', photos_path %>
->>>>>>> 4f7853b8185997abf96d9845c9c986bf8b414c7b
