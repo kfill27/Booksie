@@ -4,7 +4,7 @@
     <div class="individualPhoto text-center">
       <%= image_tag(@photo.image.url, :class => "showImage") %>
       <p>
-        <%= link_to 'Back' %>
+        <%= link_to 'Back', authenticated_root_path %>
       </p>
     </div>
     <div class="comments">

@@ -47,39 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 /*   Header   */
 .navbar {
   margin-bottom: 0px;
-
  }
-/*
-.navbar-header {
-    float: none;
-}
-
-.navbar-toggle {
-    display: block;
-}
-
-.navbar-collapse {
-    border-top: 1px solid transparent;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-}
-
-.navbar-collapse.collapse {
-    display: none!important;
-}
-
-.navbar-nav {
-    float: none!important;
-    margin: 7.5px -15px;
-}
-
-.navbar-nav>li {
-    float: none;
-}
-
-.navbar-nav>li>a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}*/
 
 /*   Jumbotron   */
  .jumbotron {
@@ -125,9 +93,6 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
   height: 70px;
   background-color: #6E7070;
-/*  position: fixed;
-  left:0px;
-  bottom:0px;*/
 }
 
 /*  Profile Page */
@@ -176,7 +141,10 @@ img {
   margin: 10px;
 }
 
-
+ul.timeline {
+  border-left: 1px solid #6E7070;
+  padding-left: 10px;
+}
 
 /*media query for jumbotron height > 500px: small & xs screen size*/
 

@@ -13,39 +13,22 @@
           <%= link_to "booksie", authenticated_root_path, :id => 'logo' %>
         </div>
       </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
-         <!--  Logged in as <strong><%= current_user.email %></strong> -->
-            <li>Other Booksies</li>
-            <li>Settings?</li>
-            <li class="active"><%= link_to 'Edit profile', edit_user_registration_path %></li>
-            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-
-            <!-- .each loop to run through all booksies you've been invited to. -->
-            <% else %>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Sign up", new_user_registration_path %></li>
-        <li><%= link_to "Login", new_user_session_path %></li>
-            <% end %>
-      </ul>
-    </div>
-       <!--  <ul class="nav navbar-nav navbar-right dropdown">
-          <% if user_signed_in? %>
-         <!--  Logged in as <strong><%= current_user.email %></strong>
-            <li>Other Booksies</li>
-            <li class="active"><%= link_to 'Edit profile', edit_user_registration_path %></li>
-            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-            <li>Settings?</li>
-
+          <!--  Logged in as <strong><%= current_user.email %></strong> -->
+          <li><a href="#">Other Booksies</a></li>
+          <li><a href="#">Settings</a></li>
+          <li class="active"><%= link_to 'Edit profile', edit_user_registration_path %></li>
+          <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          <!-- .each loop to run through all booksies you've been invited to. -->
+          <% else %>
         </ul>
-        <ul class="nav nav-pills navbar-right">
-        <% else %>
+        <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "Sign up", new_user_registration_path %></li>
           <li><%= link_to "Login", new_user_session_path %></li>
-        <% end %>
-        </ul> -->
+          <% end %>
+        </ul>
       </div>
     </div>
   </nav>
