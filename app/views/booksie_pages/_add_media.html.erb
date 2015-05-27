@@ -27,8 +27,11 @@
                   </ul>
               </div>
                 <div class="upload-button text-center">
-                 <%= f.file_field :image %>
+                  <%= f.file_field :image %>
+                  <%= f.label :tag_list, "Tags (separated by commas)" %><br />
+                  <%= f.text_field :tag_list %>
                 </div>
+
                 <div class="actions">
                   <%= f.submit "Upload Photo", class: "btn btn-default" %>
                 </div>

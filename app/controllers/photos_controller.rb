@@ -4,9 +4,12 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.json
   def index
-    @photos = Photo.all
-    @comment = Comment.new
-
+    if params[:tag]
+      @photos = Photo.tagged_with(params[:tag])
+    else
+      @photos = Photo.all
+      @comment = Comment.new
+    end
 
   end
 
@@ -17,6 +20,13 @@ class PhotosController < ApplicationController
     @commentable = @photo
     @comments = @commentable.comments
     @comment = Comment.new
+
+    if params[:tag]
+      @photos = Photo.tagged_with(params[:tag])
+    else
+      @photos = Photo.all
+      @comment = Comment.new
+    end
 
   end
 
@@ -83,6 +93,6 @@ class PhotosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      params.require(:photo).permit(:image, :booksie_page_id)
+      params.require(:photo).permit(:image, :booksie_page_id, :tag_list)
     end
 end
