@@ -26,7 +26,7 @@
                   <%# end %>
                   </ul>
               </div>
-                <div class="upload-button text-center">
+                <div class="upload-button">
                  <%= f.file_field :image %>
                 </div>
                 <div class="actions">
@@ -57,8 +57,11 @@
                 <%= form_for(@milestone) do |f| %>
                 <ul class="list-unstyled">
                   <li><%= f.date_field :date %></li>
-                  <li><%= f.text_field :post %></li>
-                  <li><%= f.submit %></li>
+                  <li><%= f.label "Enter your milestone..." %></li>
+                  <li><%= f.text_field :post, class: "milestone" %></li>
+                  <div>
+                  <%= f.submit "Upload Milestone", class: "btn btn-default" %>
+                  </div>
                 </ul>
               <% end %>
             </div>

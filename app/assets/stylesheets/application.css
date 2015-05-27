@@ -47,9 +47,10 @@ h1, h2, h3, h4, h5, h6 {
 /*   Header   */
 .navbar {
   margin-bottom: 0px;
- }
 
-/*.navbar-header {
+ }
+/*
+.navbar-header {
     float: none;
 }
 
@@ -141,6 +142,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+a:focus, button:focus {
+  outline:0;
+}
+
 .circle {
   background-color: #D8B244;
   height: 200px;
@@ -153,8 +158,6 @@ img {
   padding-top: 10px;
 }
 
-
-
 .add-users {
   display: inline-block;
   padding: 30px;
@@ -166,6 +169,11 @@ img {
 
 .showImage {
   max-height: 500px;
+}
+
+.milestone {
+  padding: 5px;
+  margin: 10px;
 }
 
 
