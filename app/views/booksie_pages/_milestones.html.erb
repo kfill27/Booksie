@@ -1,29 +1,25 @@
 <div class="col-md-4 milestones-section">
-	<h2>Milestones & Memories</h2>
-    <ul class="timeline">
-  <li><div class="tldate"></div></li>
- 
+  <h2>Milestones & Memories</h2>
+  <ul class="timeline">
+    <li><div class="tldate"></div></li>
 
- <% @booksie_page.milestones.each do |milestone| %>
-
-  <li>
-    <div class="tl-circ"></div>
-    <div class="timeline-panel">
-      <div class="tl-heading">
-
-        <% @milestones.each do |milestone| %>
-        <%= @milestone.date %>
-        <%= @milestone.post %>
-        <% end %>
-
-        <h4><%= milestone.date %></h4>
-
+    <% @booksie_page.milestones.each do |milestone| %>
+    <li>
+      <div class="tl-circ"></div>
+      <div class="timeline-panel">
+        <div class="tl-heading">
+          <% @milestones.each do |milestone| %>
+            <%= @milestone.date %>
+            <%= @milestone.post %>
         <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i></small></p>
+           <% end %>
+        </div>
+<!--      <div class="tl-body">
+<p><%= milestone.post %></p>
+</div> -->
       </div>
- <!--      <div class="tl-body">
-        <p><%= milestone.post %></p>
-      </div> -->
-    </div>
-  </li>
-
+    </li>
+    <% end %>
+  </ul>
+</div>
 
