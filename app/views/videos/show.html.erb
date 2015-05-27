@@ -6,6 +6,7 @@
   <p><%= link_to 'Back', :back %></p>
 </div>
 
+<<<<<<< HEAD
 <div class="comment-form">
   <%= form_for [@video, Comment.new] do |f| %>
     <p>
@@ -31,3 +32,27 @@
     <% end %>
   </div>
 </div>
+=======
+<%= video_tag(@video.video.url, controls: true) %>
+
+<h2>Comments</h2>
+<%= form_for [@video, Comment.new] do |f| %>
+    <p>
+      <%= f.label :content %><br />
+      <%= f.text_area :content %>
+    </p>
+    <p><%= f.submit "Submit" %></p>
+  <% end %>
+
+  <% @video.comments.each do |comment| %>
+    <div>
+      <strong><%= comment.user_name %></strong>
+      <br />
+      <p><%= comment.content %></p>
+      <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    </div>
+  <% end %>
+
+<%= link_to 'Edit', edit_video_path(@video) %> |
+<%= link_to 'Back', videos_path %>
+>>>>>>> f07b9cb0c3238a7399905157251e5073fa5a0086
