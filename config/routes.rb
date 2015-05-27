@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   get 'booksie_pages/:id' => 'booksie_pages#show'
 
   get 'contributor' => 'users#contributor'
+  get 'tags/:tag', to: 'photos#index', as: :tag
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

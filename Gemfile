@@ -9,7 +9,7 @@ gem 'aws-sdk-v1'
 gem 'carrierwave-video'
 gem 'fog'
 gem 'fog-aws'
-gem 'acts_as_taggable', '~> 2.0.2'
+gem 'acts-as-taggable-on', '~> 3.5.0'
 gem 'carrierwave-video-thumbnailer'
 gem 'figaro'
 

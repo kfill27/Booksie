@@ -3,6 +3,7 @@
   <p id="notice"><%= notice %></p>
     <div class="individualPhoto text-center">
       <%= image_tag(@photo.image.url, :class => "showImage") %>
+      <p>Tagged with: <%= raw @photo.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></p>
       <p>
         <%= link_to 'Back', authenticated_root_path %>
       </p>
