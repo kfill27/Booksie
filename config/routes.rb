@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   resources :photos, concerns: :commentable
   resources :videos, concerns: :commentable
+  resources :milestones, concerns: :commentable
 
 
   devise_for :users

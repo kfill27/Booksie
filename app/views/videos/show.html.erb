@@ -2,5 +2,23 @@
 
 <%= video_tag(@video.video.url, controls: true) %>
 
+<h2>Comments</h2>
+<%= form_for [@video, Comment.new] do |f| %>
+    <p>
+      <%= f.label :content %><br />
+      <%= f.text_area :content %>
+    </p>
+    <p><%= f.submit "Submit" %></p>
+  <% end %>
+
+  <% @video.comments.each do |comment| %>
+    <div>
+      <strong><%= comment.user_name %></strong>
+      <br />
+      <p><%= comment.content %></p>
+      <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    </div>
+  <% end %>
+
 <%= link_to 'Edit', edit_video_path(@video) %> |
 <%= link_to 'Back', videos_path %>
