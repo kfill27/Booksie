@@ -6,3 +6,4 @@ class BooksiePage < ActiveRecord::Base
   has_many :videos, dependent: :destroy
   has_many :milestones, dependent: :destroy
 end
+

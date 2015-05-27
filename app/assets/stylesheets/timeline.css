@@ -39,7 +39,7 @@
         .timeline > li:after {
             clear: both;
         }
-
+/*need to get this section to invert from original float to the left*/
         .timeline > li > .timeline-panel {
             width: 46%;
             float: left;
@@ -146,9 +146,9 @@
         margin-top: 5px;
     }
 
-@media (max-width: 767px) {
+@media (max-width: 400px) {
     ul.timeline:before {
-        left: 40px;
+        left: 20px;
     }
 
     ul.timeline > li > .timeline-panel {
