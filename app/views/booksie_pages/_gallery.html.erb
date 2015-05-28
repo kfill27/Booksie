@@ -1,11 +1,12 @@
 <hr>
 <div class="">
   <div class="container col-md-8">
-    <ul class ="list-inline list-unstyled">
-        <li><h2>All</h2></li>
-        <li><h2>Child 1</h2></li>
-        <li><h2>Child 2</h2></li>
-    </ul>
+    <div id="tag_cloud">
+      <% tag_cloud Photo.tag_counts, %w[l] do |tag, css_class| %>
+      <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+      <% end %>
+    </div>
+
     <!-- Photo Gallery -->
       <div class="row">
         <% @photos.each do |photo| %>

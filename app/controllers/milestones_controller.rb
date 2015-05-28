@@ -4,7 +4,12 @@ before_action :set_milestone, only: [:show, :edit, :update, :destroy]
   # GET /milestone
   # GET /milestone.json
   def index
-    @milestones = Milestone.all
+     if params[:tag]
+      @milestones = Milestone.tagged_with(params[:tag])
+    else
+      @milestones = Milestone.all
+      @comment = Comment.new
+    end
   end
 
   # GET /milestone/1
@@ -76,7 +81,7 @@ before_action :set_milestone, only: [:show, :edit, :update, :destroy]
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def milestone_params
-      params.require(:milestone).permit(:date, :post, :booksie_page_id)
+      params.require(:milestone).permit(:date, :post, :booksie_page_id, :tag_list)
     end
 
 end

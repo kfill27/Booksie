@@ -64,12 +64,13 @@
                   <li><%= f.date_field :date %></li>
                   <li><%= f.label "Enter your milestone..." %></li>
                   <li><%= f.text_field :post, class: "milestone" %></li>
+                  <li><%= f.label :tag_list, "Tags (separated by commas)" %><br />
+                  <li><%= f.text_field :tag_list %></li?
                   <div>
                   <%= f.submit "Upload Milestone", class: "btn btn-default" %>
                   </div>
                 </ul>
               <% end %>
-            </div>
             </div>
           </div>
         </div>
@@ -91,6 +92,8 @@
           <div class="modal-body">
             <%= form_for(Video.new) do |f| %>
               <%= f.file_field :video %>
+              <%= f.label :tag_list, "Tags (separated by commas)" %><br />
+              <%= f.text_field :tag_list %>
               <div class="actions">
                 <%= f.submit "Upload Video", class: "btn btn-default" %>
               </div>
