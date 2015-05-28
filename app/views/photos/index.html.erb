@@ -14,32 +14,20 @@
       <tr>
         <td><%= image_tag(photo.image) %></td>
         <td>
-        <!-- <h3>Comments</h3> -->
-          <% photo.comments.each do |comment| %>
-            <div>
-              <strong><%= comment.user_name %></strong>
-              <br />
-              <p><%= comment.content %></p>
-              <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
-            </div>
-          <% end %>
 
-          <%= form_for [photo, Comment.new] do |f| %>
-            <p>
-              <%= f.label :content %><br />
-              <%= f.text_area :content %>
-            </p>
-            <p><%= f.submit "Submit" %></p>
-          <% end %>
-
-        </td>
-
-
-        <td><%= link_to 'Show', photo %></td>
-        <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-        <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
     <% end %>
+
+      <% @videos.each do |video| %>
+
+        <td><%= video_tag(video.video.url, controls: true) %></td>
+
+
+    <% end %>
+
+  <% @milestones.each do |milestone| %>
+    <%= @milestone.date %>
+    <%= @milestone.post %>
+  <% end %>
   </tbody>
 </table>
 
