@@ -5,5 +5,9 @@ class BooksiePage < ActiveRecord::Base
   has_many :photos, dependent: :destroy
   has_many :videos, dependent: :destroy
   has_many :milestones, dependent: :destroy
+
+  def recent_milestones
+  	milestones.limit(10).sort_by(&:date).reverse
+  end
 end
 
