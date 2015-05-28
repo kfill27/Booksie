@@ -22,14 +22,4 @@ $(document).ready(function() {
     $('#createNewTextbox').append('<input type= "email" id="email" name="user[email][]" placeholder="Invitation email" required/>');
 });
 
-// })
-<script>
-  var slideout = new Slideout({
-    'panel': document.getElementById('panel'),
-    'menu': document.getElementById('menu'),
-    'padding': 256,
-    'tolerance': 70
-  });
-</script>
-
 //= require turbolinks
