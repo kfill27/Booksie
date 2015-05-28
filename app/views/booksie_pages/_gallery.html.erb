@@ -2,7 +2,7 @@
 <div class="">
   <div class="container col-md-8">
     <div id="tag_cloud">
-      <% tag_cloud Photo.tag_counts, %w[l] do |tag, tags| %>
+      <% tag_cloud @photos.tag_counts, %w[l] do |tag, tags| %>
       <%= link_to tag.name, tag_path(tag.name), class: tags %>
       <% end %>
     </div>
