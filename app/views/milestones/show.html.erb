@@ -2,6 +2,7 @@
 
 <%= @milestone.date %>
 <%= @milestone.post %>
+<p>Tagged with: <%= raw @milestone.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></p>
 
 <h2>Comments</h2>
 <%= form_for [@milestone, Comment.new] do |f| %>

@@ -6,6 +6,10 @@ class PhotosController < ApplicationController
   def index
     if params[:tag]
       @photos = Photo.tagged_with(params[:tag])
+      @videos = Video.tagged_with(params[:tag])
+      @milestones = Milestone.tagged_with(params[:tag])
+      @video = Video.new
+      @milestone = Milestone.new
     else
       @photos = Photo.all
       @comment = Comment.new

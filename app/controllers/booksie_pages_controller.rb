@@ -17,7 +17,6 @@ class BooksiePagesController < ApplicationController
     # TODO REFACTOR
     @booksie_page = params[:id] ? BooksiePage.find(params[:id]) : current_user.booksie_pages.first
     # @booksie_page = current_user.check_if_owner(params[:id])
-    @photos = current_user.photos
 	end
 
 	def new
