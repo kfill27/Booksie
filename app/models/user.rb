@@ -23,6 +23,9 @@ class User < ActiveRecord::Base
     self.abilities.where(role: "contributor").map(&:booksie_page)
   end
 
+  def name
+    user.first_name + user.last_name
+  end
 
   private
   def create_booksie_page
