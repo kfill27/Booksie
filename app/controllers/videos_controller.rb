@@ -4,7 +4,12 @@ class VideosController < ApplicationController
   # GET /videos
   # GET /videos.json
   def index
-    @videos = Video.all
+     if params[:tag]
+      @videos = Video.tagged_with(params[:tag])
+    else
+      @videos = Video.all
+      @comment = Comment.new
+    end
   end
 
   # GET /videos/1
@@ -70,6 +75,6 @@ class VideosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def video_params
-      params.require(:video).permit(:video, :booksie_page_id)
+      params.require(:video).permit(:video, :booksie_page_id, :tag_list)
     end
 end

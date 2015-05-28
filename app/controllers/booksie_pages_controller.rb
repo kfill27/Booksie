@@ -13,10 +13,11 @@ class BooksiePagesController < ApplicationController
     @photos = current_user.photos
     @videos = current_user.videos
     @milestones = current_user.milestones
+    @milestone = Milestone.new
     # TODO REFACTOR
     @booksie_page = params[:id] ? BooksiePage.find(params[:id]) : current_user.booksie_pages.first
     # @booksie_page = current_user.check_if_owner(params[:id])
-    @photos = current_user.photos   
+    @photos = current_user.photos
 	end
 
 	def new
