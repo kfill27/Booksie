@@ -95,8 +95,9 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #6E7070;
 }
 
-/*  Profile Page */
+/**************************  Profile Page ***************************/
 
+/* Upload Section*/
 .add-media-section {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -119,10 +120,14 @@ a:focus, button:focus {
   margin: 0 auto;
 }
 
+/* Gallery */
+
 img {
   padding-top: 10px;
 }
 
+
+/* Invite/Add Contributors */
 .add-users {
   display: inline-block;
   padding: 30px;
@@ -131,6 +136,8 @@ img {
 .upload-button {
   padding: 20px;
 }
+
+
 
 .showImage {
   max-height: 500px;
@@ -141,9 +148,14 @@ img {
   margin: 10px;
 }
 
+
 ul.timeline {
   border-left: 1px solid #6E7070;
   padding-left: 10px;
+}
+
+.timeline > li > .timeline-panel {
+  padding: 20px 10px 10px 10px;
 }
 
 /*media query for jumbotron height > 500px: small & xs screen size*/
