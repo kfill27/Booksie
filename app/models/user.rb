@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
   end
 
   def name
-    user.first_name + user.last_name
+    first_name + last_name
   end
 
   private
