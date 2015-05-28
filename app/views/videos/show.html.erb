@@ -3,6 +3,7 @@
 <p id="notice"><%= notice %></p>
 <div class="text-center">
   <%= video_tag(@video.video.url, controls: true) %>
+  <p>Tagged with: <%= raw @video.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></p>
   <p><%= link_to 'Back', :back %></p>
 </div>
 

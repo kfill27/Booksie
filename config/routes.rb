@@ -18,17 +18,18 @@ Rails.application.routes.draw do
   devise_for :users
   devise_scope :user do
     authenticated :user do
-      root 'booksie_pages#show', as: :authenticated_root
+      root 'booksie_pages#dashboard', as: :authenticated_root
     end
     unauthenticated do
       root 'users#landing', as: :unauthenticated_root
     end
   end
-  root 'booksie_page#show'
+  root 'booksie_page#dashboard'
+  resources :booksie_pages, only: [:show]
   # get 'profile/:username' => 'users#profile', as: :profile
   get 'landing' => 'users#landing'
   get 'settings' => 'users#settings'
-  get 'booksie_pages/:id' => 'booksie_pages#show'
+  get 'booksie_pages/:id' => 'booksie_pages#dashboard'
 
   get 'contributor' => 'users#contributor'
   get 'tags/:tag', to: 'photos#index', as: :tag

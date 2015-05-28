@@ -2,11 +2,12 @@
 
 <%= @milestone.date %>
 <%= @milestone.post %>
+<p>Tagged with: <%= raw @milestone.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></p>
 
 <h2>Comments</h2>
 <%= form_for [@milestone, Comment.new] do |f| %>
     <p>
-      <%= f.label :content %><br />
+      <%= f.label :content %>
       <%= f.text_area :content %>
     </p>
     <p><%= f.submit "Submit" %></p>
@@ -15,7 +16,6 @@
   <% @milestone.comments.each do |comment| %>
     <div>
       <strong><%= comment.user_name %></strong>
-      <br />
       <p><%= comment.content %></p>
       <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
     </div>

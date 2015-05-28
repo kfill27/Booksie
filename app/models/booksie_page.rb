@@ -6,8 +6,14 @@ class BooksiePage < ActiveRecord::Base
   has_many :videos, dependent: :destroy
   has_many :milestones, dependent: :destroy
 
+  scope :contributor, ->(user) { joins(:ability).where(abilities: {role: "contributor"}) }
+
   def recent_milestones
   	milestones.limit(10).sort_by(&:date).reverse
+  end
+
+  def owner
+      self.abilities.find_by(role: "owner").user
   end
 end
 
