@@ -1,0 +1,10 @@
+<%= render 'layouts/header' %>
+<% current_user.contribute_pages.each do |booksie| %>
+  <%= link_to booksie.owner.first_name, booksie %>
+<% end %>
+<%= render 'add_media' %>
+<%= render 'gallery' %>
+<%= render 'milestones' %>
+<%= render 'add_contributor' %>
+
+
