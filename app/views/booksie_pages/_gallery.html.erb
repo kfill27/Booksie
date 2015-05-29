@@ -36,6 +36,7 @@
           <%= video_tag(video.video.url(:thumb), controls: true) %>
         <% end %>
         <%= link_to video, method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <%= video.date %>
           <i class="fa fa-times"></i>
         <% end %>
          </div>

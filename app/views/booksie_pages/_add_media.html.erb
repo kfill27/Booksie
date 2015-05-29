@@ -89,6 +89,7 @@
           </div>
           <div class="modal-body">
             <%= form_for(Video.new) do |f| %>
+              <%= f.date_field :date %>
               <%= f.file_field :video %>
               <%= f.label :tag_list, "Tags (separated by commas)" %><br />
               <%= f.text_field :tag_list %>
