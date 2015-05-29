@@ -8,6 +8,18 @@
           <div class="tl-body">
             <h4><%= milestone.date %></h4>
             <p><%= milestone.post %></p>
+            <!-- Show Icon -->
+              <%= link_to milestone do %>
+                <i class="fa fa-eye"></i>
+              <% end %>
+            <!-- Edit Icon -->
+              <%= link_to edit_milestone_path(milestone) do %>
+                <i class="fa fa-pencil"></i>
+              <% end %>
+            <!-- Destroy Icon -->
+              <%= link_to milestone, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="fa fa-times"></i>
+              <% end %>
           </div>
         </div>
       </li>

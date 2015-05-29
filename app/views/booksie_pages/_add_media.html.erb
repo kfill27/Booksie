@@ -1,6 +1,5 @@
 <div class="container add-media-section">
   <div class="row">
-
 <!-- Photo Upload  -->
     <div class="col-md-4 col-xs-4 text-center">
       <div class="circle">
@@ -27,7 +26,6 @@
                   <%# end %>
                   </ul>
               </div>
-
               <div class="upload-button text-center">
                 <!-- added date -->
                 <%= f.date_field :date %>
@@ -35,7 +33,6 @@
                 <%= f.label :tag_list, "Tags (separated by commas)" %><br />
                 <%= f.text_field :tag_list %>
               </div>
-
               <div class="actions">
                 <%= f.submit "Upload Photo", class: "btn btn-default" %>
               </div>
@@ -45,7 +42,6 @@
         </div>
       </div>
     </div>
-
 
 <!-- Milestone Upload  -->
     <div class="col-md-4 col-xs-4 text-center">
@@ -66,7 +62,7 @@
                   <li><%= f.date_field :date %></li>
                   <li><%= f.label "Enter your milestone..." %></li>
                   <li><%= f.text_field :post, class: "milestone" %></li>
-                  <li><%= f.label :tag_list, "Tags (separated by commas)" %><br />
+                  <li><%= f.label :tag_list, "Tags (separated by commas)" %></li>
                   <li><%= f.text_field :tag_list %></li>
                   <div>
                   <%= f.submit "Upload Milestone", class: "btn btn-default" %>
