@@ -62,7 +62,7 @@ class VideosController < ApplicationController
   def destroy
     @video.destroy
     respond_to do |format|
-      format.html { redirect_to videos_url, notice: 'Video was successfully destroyed.' }
+      format.html { redirect_to :back, notice: 'Video was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -75,6 +75,6 @@ class VideosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def video_params
-      params.require(:video).permit(:video, :booksie_page_id, :tag_list)
+      params.require(:video).permit(:date, :video, :booksie_page_id, :tag_list)
     end
 end
