@@ -18,7 +18,7 @@
           <% if user_signed_in? %>
           <!--  Logged in as <strong><%= current_user.email %></strong> -->
           <li>
-            <a data-target="#" data-toggle="dropdown">Other Booksies<span class="caret"></span></a>
+            <a data-target="#" data-toggle="dropdown" class="drop-pill">Other Booksies<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                 <% current_user.contribute_pages.each do |booksie| %>
                   <li>
@@ -28,7 +28,7 @@
               </ul>
           </li>
           <li><a href="#">Settings</a></li>
-          <li class="active"><%= link_to 'Edit profile', edit_user_registration_path %></li>
+          <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
           <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
           <!-- .each loop to run through all booksies you've been invited to. -->
           <% else %>

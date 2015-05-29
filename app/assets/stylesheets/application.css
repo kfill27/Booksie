@@ -95,6 +95,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /**************************  Profile Page ***************************/
+.navbar-default .navbar-nav>li>a {
+  color: #fff;
+}
+
+.drop-pill {
+  border: 1px solid #37AAA0;
+  background-color: #37AAA0;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+a.drop-pill {
+  color: #fff;
+}
+
 
 /* Upload Section*/
 .add-media-section {
