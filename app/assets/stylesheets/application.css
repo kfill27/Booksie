@@ -121,6 +121,19 @@ a:focus, button:focus {
 
 /* Gallery */
 
+.taggable-tags {
+  border: 1px solid #37AAA0;
+  background-color: #37AAA0;
+  color: #fff;
+  padding: 10px 15px;
+  margin: 0 10px;
+  border-radius: 3px;
+}
+
+.taggable-tags a {
+    text-decoration: none;
+  }
+
 img {
   padding-top: 10px;
   max-width: 100%;
@@ -146,16 +159,6 @@ img {
 .milestone {
   padding: 5px;
   margin: 10px;
-}
-
-
-ul.timeline {
-  border-left: 1px solid #6E7070;
-  padding-left: 10px;
-}
-
-.timeline > li > .timeline-panel {
-  padding: 20px 10px 10px 10px;
 }
 
 .supporting-icon {
