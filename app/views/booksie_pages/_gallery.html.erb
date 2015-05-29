@@ -17,6 +17,7 @@
           <%= image_tag photo.image_url(:thumb) %>
         <% end %>
         <%= link_to photo, method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <%= photo.date %>
           <i class="fa fa-times"></i>
         <% end %>
          </div>
