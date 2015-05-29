@@ -13,7 +13,7 @@ class BooksiePage < ActiveRecord::Base
   end
 
   def owner
-      self.abilities.find_by(role: "owner").user
+    self.abilities.find_by(role: "owner").user
   end
 end
 

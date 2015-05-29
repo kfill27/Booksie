@@ -22,6 +22,5 @@ $(document).ready(function() {
     $('#createNewTextbox').append('<input type= "email" id="email" name="user[email][]" placeholder="Invitation email" required/>');
 });
 
-
 //= require turbolinks
 
