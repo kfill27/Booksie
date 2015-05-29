@@ -4,6 +4,7 @@
   <div class="tagged-photos">
     <% @photos.each do |photo| %>
       <%= image_tag photo.image.url (:thumb) %>
+      <%= @photo.date %>
     <% end %>
   </div>
 
