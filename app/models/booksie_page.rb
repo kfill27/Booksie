@@ -9,7 +9,7 @@ class BooksiePage < ActiveRecord::Base
   scope :contributor, ->(user) { joins(:ability).where(abilities: {role: "contributor"}) }
 
   def recent_milestones
-  	milestones.limit(10).sort_by(&:date).reverse
+  	milestones.limit(20).sort_by(&:date).reverse
   end
 
   def owner
