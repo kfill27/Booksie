@@ -72,7 +72,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 15px;
  }
 /*   Supporting Area   */
-
 .supporting h1 {
   margin-bottom: 30px;
 }
@@ -81,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 30px 0px;
 }
 
-.fa-5x {
+.supporting-icon {
   color: #D8B244;
 }
 
@@ -124,6 +123,7 @@ a:focus, button:focus {
 
 img {
   padding-top: 10px;
+  max-width: 100%;
 }
 
 
@@ -158,6 +158,15 @@ ul.timeline {
   padding: 20px 10px 10px 10px;
 }
 
+.supporting-icon {
+  color: #D8B244;
+}
+
+textarea {
+  width: 75%;
+  height: auto;
+}
+
 /*media query for jumbotron height > 500px: small & xs screen size*/
 
 /* Extra small devices (phones, less than 768px) */
@@ -180,6 +189,10 @@ ul.timeline {
     width: 100px;
     border-radius: 50%;
    }
+  textarea {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 1000px) {

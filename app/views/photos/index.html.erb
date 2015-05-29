@@ -1,36 +1,26 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Photos</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container">
+  <h1>Showing all things tagged with:</h1>
+  <h2>Photos</h2>
+  <div class="tagged-photos">
     <% @photos.each do |photo| %>
-      <tr>
-        <td><%= image_tag(photo.image) %></td>
-        <td>
-
+      <%= image_tag photo.image.url (:thumb) %>
     <% end %>
+  </div>
 
-      <% @videos.each do |video| %>
-
-        <td><%= video_tag(video.video.url, controls: true) %></td>
-
-
+<h2>Videos</h2>
+<hr>
+  <div class="tagged-videos">
+    <% @videos.each do |video| %>
+      <%= video_tag(video.video.url, controls: true) %>
     <% end %>
+  </div>
 
-  <% @milestones.each do |milestone| %>
-    <%= @milestone.date %>
-    <%= @milestone.post %>
-  <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Photo', new_photo_path %>
+<h2>Milestones</h2>
+<hr>
+  <div class="tagged-milestones">
+    <% @milestones.each do |milestone| %>
+      <%= @milestone.date %>
+      <%= @milestone.post %>
+    <% end %>
+  </div>
+</div>
