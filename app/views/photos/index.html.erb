@@ -17,16 +17,21 @@
 
     <% end %>
 
-      <% @videos.each do |video| %>
+      <% unless @videos.nil? %>
+    <% @videos.each do |video| %>
+
 
         <td><%= video_tag(video.video.url, controls: true) %></td>
 
 
+      <% end %>
     <% end %>
 
-  <% @milestones.each do |milestone| %>
-    <%= @milestone.date %>
-    <%= @milestone.post %>
+  <% unless @milestones.nil? %>
+    <% @milestones.each do |milestone| %>
+      <%= @milestone.date %>
+      <%= @milestone.post %>
+    <% end %>
   <% end %>
   </tbody>
 </table>

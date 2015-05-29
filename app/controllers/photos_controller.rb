@@ -52,7 +52,7 @@ class PhotosController < ApplicationController
   # POST /photos.json
   def create
     @photo = Photo.new(photo_params)
-    @photo.booksie_page = current_user.booksie_page #||=
+    # @photo.booksie_page = current_user.booksie_page #||=
 
     respond_to do |format|
       if @photo.save

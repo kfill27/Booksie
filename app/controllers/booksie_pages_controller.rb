@@ -6,9 +6,14 @@ class BooksiePagesController < ApplicationController
   def dashboard
   # will show my personal booksie, the def show will show a booksie
     @booksie_page = current_user.check_if_owner(params[:id])
-    @photos = current_user.photos
-    @videos = current_user.videos
-    @milestones = current_user.milestones
+    # @booskie_page = BooksiePage.where(BooksiePage.find(params[:id]).owner.id == current_user.id)
+    # if BooksiePage.find(params[:id]).owner.id == current_user.id
+    #   @booksie_page = BooksiePage.find(params[:id])
+    # end
+    # @booksie_page = params[:id] ? BooksiePage.find(params[:id]) : current_user.booksie_page
+    @photos = @booksie_page.photos
+    @videos = @booksie_page.videos
+    @milestones = @booksie_page.milestones
     @milestone = Milestone.new
 
     # render :show
@@ -17,6 +22,7 @@ class BooksiePagesController < ApplicationController
 	def show
     # TODO REFACTOR
     @booksie_page = params[:id] ? BooksiePage.find(params[:id]) : current_user.booksie_page
+    # @booksie_page = Booksie.find(params[:id])
     @photos = @booksie_page.photos
     @videos = @booksie_page.videos
     @milestones = @booksie_page.milestones
@@ -45,4 +51,5 @@ class BooksiePagesController < ApplicationController
       end
     end
 	end
+
 end
