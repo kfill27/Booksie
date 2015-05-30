@@ -8,7 +8,7 @@
            <div id="tag_cloud">
            <p>Recently Used Tags:
             <% tag_cloud @photos.tag_counts, %w[l] do |tag, tags| %>
-              <%= link_to tag.name, tag_path(tag.name), class: 'taggable-tags' %>
+              <%= link_to tag.name, tag_path(tag.name, booksie_page_id: @booksie_page.id), class: 'taggable-tags' %>
             <% end %>
             </p>
           </div>

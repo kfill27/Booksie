@@ -58,6 +58,7 @@
                 </div>
                 <div class="modal-body">
                 <%= form_for(Milestone.new) do |f| %>
+                <%= f.hidden_field :booksie_page_id, value: @booksie_page.id %>
                 <ul class="list-unstyled">
                   <li><%= f.date_field :date %></li>
                   <li><%= f.label "Enter your milestone..." %></li>
@@ -89,6 +90,7 @@
           </div>
           <div class="modal-body">
             <%= form_for(Video.new) do |f| %>
+            <%= f.hidden_field :booksie_page_id, value: @booksie_page.id %>
               <%= f.date_field :date %>
               <%= f.file_field :video %>
               <%= f.label :tag_list, "Tags (separated by commas)" %><br />
