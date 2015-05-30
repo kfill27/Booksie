@@ -14,7 +14,7 @@ class BooksiePagesController < ApplicationController
     @photos = @booksie_page.photos
     @videos = @booksie_page.videos
     @milestones = @booksie_page.milestones
-    @milestone = Milestone.new
+    # @milestone = Milestone.new
 
     # render :show
   end

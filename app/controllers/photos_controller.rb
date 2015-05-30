@@ -5,9 +5,10 @@ class PhotosController < ApplicationController
   # GET /photos.json
   def index
     if params[:tag]
-      @photos = Photo.tagged_with(params[:tag])
-      @videos = Video.tagged_with(params[:tag])
-      @milestones = Milestone.tagged_with(params[:tag])
+      @booksie_page = BooksiePage.find(params[:booksie_page_id])
+      @photos = @booksie_page.photos.tagged_with(params[:tag])
+      @videos = @booksie_page.videos.tagged_with(params[:tag])
+      @milestones = @booksie_page.milestones.tagged_with(params[:tag])
       @video = Video.new
       @milestone = Milestone.new
     else
@@ -97,7 +98,7 @@ class PhotosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      # added date 
+      # added date
       params.require(:photo).permit(:date, :image, :booksie_page_id, :tag_list)
     end
 end
