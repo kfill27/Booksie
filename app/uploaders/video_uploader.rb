@@ -59,7 +59,7 @@ class VideoUploader < CarrierWave::Uploader::Base
   # end
 
   version :thumb do
-  process thumbnail: [{quality: 10, size: 200, seek: '00:00:03', logger: Rails.logger}]
+  process encode_video: [:mp4, resolution: '250x250']
   end
 
   #   def full_filename for_file
