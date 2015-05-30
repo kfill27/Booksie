@@ -4,7 +4,5 @@ class Video < ActiveRecord::Base
   mount_uploader :video, VideoUploader
   acts_as_taggable
 
-  def set_success(format, opts)
-    #self.success = true
-  end
+
 end
