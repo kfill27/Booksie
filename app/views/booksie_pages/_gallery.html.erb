@@ -18,10 +18,11 @@
         <%= link_to photo do %>
           <%= image_tag photo.image_url(:thumb) %>
         <% end %>
-        <%= link_to photo, method: :delete, data: { confirm: 'Are you sure?' } do %>
-        <%= photo.date %>
-          <i class="fa fa-times"></i>
-        <% end %>
+          <p><%= photo.date %>
+            <%= link_to photo, method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <i class="fa fa-times"></i>
+            <% end %>
+          </p>
          </div>
         <% end %>
     </div>
@@ -31,14 +32,15 @@
         <h2 class="text-left">Video Gallery</h2>
         <hr>
         <% @videos.each do |video| %>
-         <div class="col-md-5 col-sm-4 col-xs-6">
+         <div class="col-md-3 col-sm-4 col-xs-6">
         <%= link_to video do %>
           <%= video_tag(video.video.url(:thumb), controls: true) %>
         <% end %>
-        <%= link_to video, method: :delete, data: { confirm: 'Are you sure?' } do %>
-        <%= video.date %>
-          <i class="fa fa-times"></i>
-        <% end %>
+          <p><%= video.date %>
+            <%= link_to video, method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <i class="fa fa-times"></i>
+            <% end %>
+          </p>
          </div>
         <% end %>
     </div>
