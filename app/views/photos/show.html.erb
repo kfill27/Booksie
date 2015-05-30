@@ -22,7 +22,7 @@
         <% @photo.comments.each do |comment| %>
           <div>
             <hr>
-            <strong><%= comment.user_name %></strong>
+            <strong><%= comment.user.name %></strong>
             <div>
               <%= comment.content %>
               <%= link_to comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' }, :class => 'comment-content' do %>

@@ -27,7 +27,9 @@ class CommentsController < ApplicationController
   def create
     @commentable = find_commentable
     @comment = @commentable.comments.build(comment_params)
+    @comment.user_id = current_user.id
 
+    # @comment = current_user.comments.build(comment_params)
     if @comment.save
       flash[:notice] = "Successfully created comment."
       redirect_to :back
