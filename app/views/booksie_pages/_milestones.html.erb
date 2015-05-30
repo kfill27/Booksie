@@ -6,19 +6,20 @@
       <li>
         <div class="timeline-panel">
           <div class="tl-body">
-            <h4><%= milestone.date %></h4>
+            <h4 class="milestone-date"><%= milestone.date %></h4>
             <p><%= milestone.post %></p>
+            <hr>
             <!-- Show Icon -->
               <%= link_to milestone do %>
-                <i class="fa fa-eye"></i>
+                <i class="milestone-icon fa fa-eye">View</i>
               <% end %>
             <!-- Edit Icon -->
               <%= link_to edit_milestone_path(milestone) do %>
-                <i class="fa fa-pencil"></i>
+                <i class="milestone-icon fa fa-pencil">Edit</i>
               <% end %>
             <!-- Destroy Icon -->
               <%= link_to milestone, method: :delete, data: { confirm: 'Are you sure?' } do %>
-                <i class="fa fa-times"></i>
+                <i class="milestone-icon fa fa-times">Delete</i>
               <% end %>
           </div>
         </div>

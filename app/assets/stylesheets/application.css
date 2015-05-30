@@ -18,6 +18,7 @@
  yellow: #D8B244
  red: #EC523B
  teal: #37AAA0
+ light teal: #87CCC6;
  gray: #6E7070
  */
 
@@ -174,6 +175,18 @@ img {
 .milestone {
   padding: 5px;
   margin: 10px;
+}
+.milestone-date {
+  color: #EC523B;
+}
+
+.milestone-icon {
+  color: #6E7070;
+  padding: 0 10px;
+}
+
+.milestone-icon:hover {
+  color: #ccc;
 }
 
 .supporting-icon {
