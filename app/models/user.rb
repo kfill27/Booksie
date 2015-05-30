@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   has_many :photos, through: :booksie_pages
   has_many :videos, through: :booksie_pages
   has_many :milestones, through: :booksie_pages
+  has_many :comments, :as => :commentable
   after_create :create_booksie_page
 
   def check_if_owner(booksie_page_id)
