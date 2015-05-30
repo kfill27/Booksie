@@ -4,7 +4,7 @@
   <div class="tagged-photos">
     <% @photos.each do |photo| %>
       <%= image_tag photo.image.url (:thumb) %>
-      <%= @photo.date %>
+      <%= photo.date %>
     <% end %>
   </div>
 
@@ -20,8 +20,8 @@
 <hr>
   <div class="tagged-milestones">
     <% @milestones.each do |milestone| %>
-      <%= @milestone.date %>
-      <%= @milestone.post %>
+      <%= milestone.date %>
+      <%= milestone.post %>
     <% end %>
   </div>
 </div>
