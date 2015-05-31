@@ -22,9 +22,7 @@
  gray: #6E7070
  */
 
-html,body{
-  height: 100%
-}
+/*   General Stuff   */
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Nixie One';
@@ -34,6 +32,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Lato', sans-serif;
  }
 
+  h1 {
+  text-align: center;
+ }
+
+ h2 {
+  color: #EC523B;
+}
+
+/*   Header   */
  #logo {
   color: #EC523B;
   font-size: 50px;
@@ -41,14 +48,6 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
  }
 
- h1 {
-  text-align: center;
- }
-
- h2 {
-  color: #EC523B;
- }
-/*   Header   */
 .navbar {
   margin-bottom: 0px;
  }
@@ -216,6 +215,12 @@ textarea {
  .back-button a, .edit-button a{
   color: #fff;
 }
+
+.fa-quote-left, .fa-quote-right {
+  color: #D8B244;
+  opacity: 0.5;
+}
+
 
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
