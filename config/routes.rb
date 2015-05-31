@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :photos
-  resources :videos
-  resources :milestones
+  resources :photos, only: [:show, :index]
+  resources :videos, only: [:show]
+  resources :milestones, only: [:show, :edit]
 
 
   concern :commentable do
