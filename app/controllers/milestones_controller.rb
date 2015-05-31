@@ -67,7 +67,7 @@ before_action :set_milestone, only: [:show, :edit, :update, :destroy]
   def destroy
     @milestone.destroy
     respond_to do |format|
-      format.html { redirect_to milestone_url, notice: 'Milestone was successfully destroyed.' }
+      format.html { redirect_to :back, notice: 'Milestone was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
