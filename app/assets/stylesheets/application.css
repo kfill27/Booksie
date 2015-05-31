@@ -22,6 +22,7 @@
  gray: #6E7070
  */
 
+/*   General Stuff   */
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Nixie One';
@@ -31,6 +32,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Lato', sans-serif;
  }
 
+  h1 {
+  text-align: center;
+ }
+
+ h2 {
+  color: #EC523B;
+}
+
+/*   Header   */
  #logo {
   color: #EC523B;
   font-size: 50px;
@@ -38,14 +48,6 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
  }
 
- h1 {
-  text-align: center;
- }
-
- h2 {
-  color: #EC523B;
- }
-/*   Header   */
 .navbar {
   margin-bottom: 0px;
  }
@@ -198,7 +200,27 @@ textarea {
   height: auto;
 }
 
-/*media query for jumbotron height > 500px: small & xs screen size*/
+
+/* Show Pages */
+
+.back-button, .edit-button {
+  border: 1px solid #D8B244;
+  background-color: #D8B244;
+  border-radius: 3px;
+  padding: 3px 20px;
+  color: #fff;
+  margin: 0 20px 0 5px;
+}
+
+ .back-button a, .edit-button a{
+  color: #fff;
+}
+
+.fa-quote-left, .fa-quote-right {
+  color: #D8B244;
+  opacity: 0.5;
+}
+
 
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
