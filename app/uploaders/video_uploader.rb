@@ -6,7 +6,7 @@ class VideoUploader < CarrierWave::Uploader::Base
   # version :thumb do
   #   process :thumbnail => [200, 200]
   # end
-  process encode_video: [:mp4, callbacks: { after_transcode: :set_success } ]
+  process encode_video: [:mp4]
 
   # version :mp4 do
   #   process :encode_video => [:mp4]

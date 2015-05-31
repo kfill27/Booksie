@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150530154627) do
+ActiveRecord::Schema.define(version: 20150531161505) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20150530154627) do
     t.datetime "updated_at",      null: false
     t.integer  "booksie_page_id"
     t.date     "date"
+    t.text     "caption"
   end
 
   add_index "photos", ["booksie_page_id"], name: "index_photos_on_booksie_page_id", using: :btree
@@ -123,6 +124,7 @@ ActiveRecord::Schema.define(version: 20150530154627) do
     t.datetime "updated_at",      null: false
     t.integer  "booksie_page_id"
     t.date     "date"
+    t.text     "caption"
   end
 
   add_index "videos", ["booksie_page_id"], name: "index_videos_on_booksie_page_id", using: :btree

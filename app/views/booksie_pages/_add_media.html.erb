@@ -32,6 +32,8 @@
                 <%= f.file_field :image %>
                 <%= f.label :tag_list, "Tags (separated by commas)" %><br />
                 <%= f.text_field :tag_list %>
+                <%= f.label :caption, "Photo caption:" %>
+                <%= f.text_field :caption %>
               </div>
               <div class="actions">
                 <%= f.submit "Upload Photo", class: "btn btn-default" %>
@@ -95,6 +97,8 @@
               <%= f.file_field :video %>
               <%= f.label :tag_list, "Tags (separated by commas)" %><br />
               <%= f.text_field :tag_list %>
+              <%= f.label :caption, "Video caption:" %>
+              <%= f.text_field :caption %>
               <div class="actions">
                 <%= f.submit "Upload Video", class: "btn btn-default" %>
               </div>
