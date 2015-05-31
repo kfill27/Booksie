@@ -3,6 +3,7 @@ class Video < ActiveRecord::Base
   has_many :comments, :as => :commentable
   mount_uploader :video, VideoUploader
   acts_as_taggable
+  validates :video, presence: true
 
 
 end

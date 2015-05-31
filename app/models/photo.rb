@@ -3,5 +3,6 @@ class Photo < ActiveRecord::Base
   has_many :comments, :as => :commentable
   mount_uploader :image, ImageUploader
   acts_as_taggable
+  validates :image, presence: true
 end
 
