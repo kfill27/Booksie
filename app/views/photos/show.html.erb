@@ -5,6 +5,10 @@
       <%= image_tag(@photo.image.url, :class => "showImage") %>
       <p>Tagged with: <%= raw @photo.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></p>
     </div>
+    <div class="caption">
+      <%= @photo.caption %>
+    </div>
+
     <div class="comments">
       <hr>
       <h2>Comments</h2>
@@ -22,7 +26,7 @@
         <% @photo.comments.each do |comment| %>
           <div>
             <hr>
-            <strong><%# comment.user.name %></strong>
+            <strong><%= comment.user.name %></strong>
             <div>
               <%= comment.content %>
               <%= link_to comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' }, :class => 'comment-content' do %>
