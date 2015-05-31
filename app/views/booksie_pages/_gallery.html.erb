@@ -18,7 +18,7 @@
         <%= link_to photo do %>
           <%= image_tag photo.image_url(:thumb) %>
         <% end %>
-          <p><%= photo.date %>
+          <p><%= photo.date.to_s(:long) %>
             <%= link_to photo, method: :delete, data: { confirm: 'Are you sure?' } do %>
               <i class="fa fa-times"></i>
             <% end %>
@@ -36,7 +36,7 @@
         <%= link_to video do %>
           <%= video_tag(video.video.url(:thumb), controls: true) %>
         <% end %>
-          <p><%= video.date %>
+          <p><%= video.date.to_s(:long) %>
             <%= link_to video, method: :delete, data: { confirm: 'Are you sure?' } do %>
               <i class="fa fa-times"></i>
             <% end %>
