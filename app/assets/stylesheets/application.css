@@ -69,9 +69,18 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
  }
 
- #login {
-  background-color: pink;
- }
+#login {
+  background-color: #D8B244;
+  border: 1px solid #D8B244;
+  border-radius: 3px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+
+a#login{
+  margin-top: 30px;
+}
 
 /*   Jumbotron   */
  .jumbotron {
@@ -215,7 +224,7 @@ a:focus, button:focus {
 
 .taggable-tags a {
     text-decoration: none;
-  }
+}
 
 img {
   padding-top: 10px;
@@ -290,20 +299,40 @@ textarea {
   padding: 10px;
 }
 
-.kyra {
+/*.kyra {
   background-color: green;
-  height: 400px;
+
 }
 
 .marilu {
   background-color: blue;
-  height: 400px;
+
 }
 
 .taryn {
-  background-color: pink;
-  height: 400px;
+
 }
+*/
+/*   Footer   */
+
+.footer {
+  color: #fff;
+}
+
+.btn < .footer {
+  padding-top: 0;
+}
+
+.learn-more {
+  padding-top: 0px;
+}
+
+.social-media {
+  color: #fff;
+  padding-top: 20px;
+}
+
+
 
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
