@@ -97,12 +97,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .supporting-icon {
-  color: #D8B244;
+  color: #EC523B;
 }
 
 /*   Testimonials   */
+.testimonial-container {
+  min-height: 400px;
+  background-color: #37AAA0;
+}
 
+.testimonial {
+  margin-top: 50px;
+}
 
+h1<.testimonial {
+  color: #fff;
+}
 
 /*   Footer   */
 .footer {
@@ -223,12 +233,13 @@ textarea {
   padding: 5px 20px 5px 0;
   color: #fff;
   margin: 0 20px 0 5px;
-}
-
- .back-button a, .edit-button a{
-  color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+ .back-button:hover, .edit-button:hover {
+  color: #fff;
+  background-color: #D8B244;
 }
 
 .fa-quote-left, .fa-quote-right {
