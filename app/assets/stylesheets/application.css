@@ -198,6 +198,10 @@ a:focus, button:focus {
   margin: 0 auto;
 }
 
+.circle:hover{
+  -webkit-animation-name: pulse;
+}
+
 /* Gallery */
 
 .taggable-tags {
