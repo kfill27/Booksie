@@ -17,8 +17,8 @@
         <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
           <!--  Logged in as <strong><%= current_user.email %></strong> -->
-          <li>
-            <a data-target="#" data-toggle="dropdown" class="drop-pill">Other Booksies<span class="caret"></span></a>
+          <li id="other-booksies">
+            <a data-target="#" data-toggle="dropdown" class="drop-pill" id="other-booksies">Other Booksies<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                 <% current_user.contribute_pages.each do |booksie| %>
                   <li>
@@ -38,7 +38,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "Sign up", new_user_registration_path %></li>
-          <li><%= link_to "Login", new_user_session_path %></li>
+          <li><%= link_to "Login", new_user_session_path, id: 'login' %></li>
           <% end %>
         </ul>
       </div>

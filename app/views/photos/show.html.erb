@@ -5,9 +5,6 @@
       <%= image_tag(@photo.image.url, :class => "showImage") %>
       <p>Tagged with: <%= raw @photo.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></p>
     </div>
-    <div class="caption">
-      <%= @photo.caption %>
-    </div>
     <div class="caption text-center">
       <i class="fa fa-quote-left fa-2x"></i><%= @photo.caption %><i class="fa fa-quote-right fa-2x"></i>
     </div>

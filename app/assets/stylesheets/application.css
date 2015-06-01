@@ -56,6 +56,23 @@ h1, h2, h3, h4, h5, h6 {
   color: #6E7070;
  }
 
+ #other-booksies {
+  color: #fff;
+ }
+
+ #other-booksies:hover {
+  background-color: #87CCC6;
+  border: 0;
+ }
+
+ .nav li {
+  text-transform: uppercase;
+ }
+
+ #login {
+  background-color: pink;
+ }
+
 /*   Jumbotron   */
  .jumbotron {
     height: 400px;
@@ -248,6 +265,20 @@ textarea {
   padding: 10px;
 }
 
+.kyra {
+  background-color: green;
+  height: 400px;
+}
+
+.marilu {
+  background-color: blue;
+  height: 400px;
+}
+
+.taryn {
+  background-color: pink;
+  height: 400px;
+}
 
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */

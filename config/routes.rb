@@ -33,6 +33,7 @@ Rails.application.routes.draw do
 
   get 'contributor' => 'users#contributor'
   get 'tags/:tag', to: 'photos#index', as: :tag
+  get 'aboutus' => 'users#about'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

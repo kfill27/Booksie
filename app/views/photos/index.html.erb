@@ -1,28 +1,26 @@
 <%= render 'layouts/header' %>
-<div class="container">
+<div class="container col-md-12">
   <h1>Showing all things tagged with:</h1>
   <h2>Photos</h2>
-  <div class="tagged-photos">
     <% @photos.each do |photo| %>
+  <div class="tagged-photos col-md-3">
       <%= image_tag photo.image.url (:thumb) %>
-      <%= photo.date %>
-    <% end %>
+      <p><%= photo.date %></p>
   </div>
-
-<h2>Videos</h2>
-<hr>
-  <div class="tagged-videos">
-    <% @videos.each do |video| %>
-      <%= video_tag(video.video.url, controls: true) %>
-    <% end %>
+      <% end %>
+  <div class="tagged-videos col-md-12">
+    <h2>Videos</h2>
+      <hr>
+      <% @videos.each do |video| %>
+        <%= video_tag(video.video.url, controls: true) %>
+      <% end %>
   </div>
-
-<h2>Milestones</h2>
-<hr>
-  <div class="tagged-milestones">
-    <% @milestones.each do |milestone| %>
-      <%= milestone.date %>
-      <%= milestone.post %>
-    <% end %>
+  <div class="tagged-milestones col-md-12">
+    <h2>Milestones</h2>
+    <hr>
+      <% @milestones.each do |milestone| %>
+        <%= milestone.date %>
+        <%= milestone.post %>
+      <% end %>
   </div>
 </div>
