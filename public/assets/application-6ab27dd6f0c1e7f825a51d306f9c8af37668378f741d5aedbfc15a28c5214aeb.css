@@ -1,0 +1,510 @@
+/* line 5, /Users/tarynkeim/Documents/Wyncode/Booksie/app/assets/stylesheets/comments.scss */
+textarea {
+  resize: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+/* line 11, /Users/tarynkeim/Documents/Wyncode/Booksie/app/assets/stylesheets/comments.scss */
+.comment-btn {
+  max-width: 25%;
+}
+
+/* line 15, /Users/tarynkeim/Documents/Wyncode/Booksie/app/assets/stylesheets/comments.scss */
+.comment-content {
+  font-size: 20px;
+  color: #EC523B;
+}
+/* line 5, /Users/tarynkeim/Documents/Wyncode/Booksie/app/assets/stylesheets/milestones.scss */
+.milestone-post {
+  border: 1px solid #87CCC6;
+  padding: 30px 20px 30px 20px;
+}
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 0%;
+  margin-left: -1.5px;
+}
+
+.timeline > li {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline > li:after {
+  clear: both;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline > li:after {
+  clear: both;
+}
+/*need to get this section to invert from original float to the left*/
+.timeline > li > .timeline-panel {
+  width: 96%;
+  float: right;
+  border: 1px solid #37AAA0;
+  border-radius: 2px;
+  padding: 5px 10px 10px 15px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: auto;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #37AAA0;
+  border-right: 0 solid #37AAA0;
+  border-bottom: 15px solid transparent;
+  content: " ";
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;*/
+}
+
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: auto;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+
+.timeline > li > .timeline-badge {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 0%;
+  margin-left: -25px;
+  background-color: #999999;
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.timeline-badge.primary {
+  background-color: #2e6da4 !important;
+}
+
+.timeline-badge.success {
+  background-color: #3f903f !important;
+}
+
+.timeline-badge.warning {
+  background-color: #f0ad4e !important;
+}
+
+.timeline-badge.danger {
+  background-color: #d9534f !important;
+}
+
+.timeline-badge.info {
+  background-color: #5bc0de !important;
+}
+
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+}
+
+.timeline-body > p + p {
+    margin-top: 5px;
+}
+
+@media (max-width: 400px) {
+
+ul.timeline:before {
+    left: 20px;
+}
+
+ul.timeline > li > .timeline-panel {
+  width: calc(100% - 90px);
+  width: -moz-calc(100% - 90px);
+  width: -webkit-calc(100% - 90px);
+}
+
+ul.timeline > li > .timeline-badge {
+  left: 15px;
+  margin-left: 0;
+  top: 16px;
+}
+
+ul.timeline > li > .timeline-panel {
+  float: right;
+}
+
+ul.timeline > li > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+ul.timeline > li > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+ /*Booksie Colors:
+ yellow: #D8B244
+ red: #EC523B
+ teal: #37AAA0
+ light teal: #87CCC6;
+ gray: #6E7070
+ */
+
+/*   General Stuff   */
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nixie One';
+ }
+
+ p, body {
+  font-family: 'Lato', sans-serif;
+ }
+
+  h1 {
+  text-align: center;
+ }
+
+ h2 {
+  color: #EC523B;
+}
+
+/*   Header   */
+ #logo {
+  color: #EC523B;
+  font-size: 50px;
+  font-family: "Lobster";
+  text-decoration: none;
+ }
+
+.navbar {
+  margin-bottom: 0px;
+ }
+
+.navbar-nav>li>a{
+  color: #6E7070;
+ }
+
+ #other-booksies {
+  color: #fff;
+ }
+
+ #other-booksies:hover {
+  background-color: #87CCC6;
+  border: 0;
+ }
+
+ .nav li {
+  text-transform: uppercase;
+ }
+
+ #login {
+  background-color: pink;
+ }
+
+/*   Jumbotron   */
+ .jumbotron {
+    height: 400px;
+    background: url(congruent_pentagon.png);
+    background-size: cover;
+    background-attachment: fixed;
+ }
+
+ input {
+  width: 100%;
+ }
+
+ input#user_first_name, input#user_last_name {
+  width: 100%;
+ }
+
+ .btn {
+  background-color: #37AAA0;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  margin: 20px 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+ }
+
+ .btn:hover {
+  background-color: #87CCC6;
+  color: #fff;
+ }
+
+/*   Supporting Area   */
+.supporting h1 {
+  margin-bottom: 30px;
+}
+
+.supporting p {
+  padding: 30px 0px;
+}
+
+.supporting-icon {
+  color: #EC523B;
+}
+
+/*   Testimonials   */
+.testimonial-container {
+  min-height: 400px;
+  background-color: #37AAA0;
+}
+
+.testimonial {
+  margin-top: 50px;
+}
+
+h1<.testimonial {
+  color: #fff;
+}
+
+/*   Footer   */
+.footer {
+  height: 70px;
+  background-color: #6E7070;
+}
+
+/**************************  Profile Page ***************************/
+/*.navbar-nav>li>a:first-child {
+  color: #fff;
+}*/
+
+.drop-pill {
+  border: 1px solid #37AAA0;
+  background-color: #37AAA0;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+a.drop-pill {
+  color: #fff;
+}
+
+
+/* Upload Section*/
+.add-media-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.fa-5x {
+  padding-top: 60px;
+  color: #fff;
+}
+
+a:focus, button:focus {
+  outline:0;
+}
+
+.circle {
+  background-color: #D8B244;
+  height: 200px;
+  max-width: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+/* Gallery */
+
+.taggable-tags {
+  border: 1px solid #37AAA0;
+  background-color: #37AAA0;
+  color: #fff;
+  padding: 10px 15px;
+  margin: 0 10px;
+  border-radius: 3px;
+}
+
+.taggable-tags a {
+    text-decoration: none;
+  }
+
+img {
+  padding-top: 10px;
+  max-width: 100%;
+}
+
+
+/* Invite/Add Contributors */
+.add-users {
+  display: inline-block;
+  padding: 30px;
+}
+
+.upload-button {
+  padding: 20px;
+}
+
+/* */
+
+.showImage {
+  max-height: 500px;
+}
+
+.milestone {
+  padding: 5px;
+  margin: 10px;
+}
+.milestone-date {
+  color: #EC523B;
+}
+
+.milestone-icon {
+  color: #6E7070;
+  padding: 0 10px;
+}
+
+.milestone-icon:hover {
+  color: #ccc;
+}
+
+.supporting-icon {
+  color: #D8B244;
+}
+
+textarea {
+  width: 75%;
+  height: auto;
+}
+
+
+/* Show Pages */
+
+.back-button, .edit-button {
+  border: 1px solid #D8B244;
+  background-color: #D8B244;
+  border-radius: 3px;
+  padding: 5px 20px 5px 0;
+  color: #fff;
+  margin: 0 20px 0 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+ .back-button:hover, .edit-button:hover {
+  color: #fff;
+  background-color: #D8B244;
+}
+
+.fa-quote-left, .fa-quote-right {
+  color: #D8B244;
+  opacity: 0.8;
+  padding: 10px;
+}
+
+.kyra {
+  background-color: green;
+  height: 400px;
+}
+
+.marilu {
+  background-color: blue;
+  height: 400px;
+}
+
+.taryn {
+  background-color: pink;
+  height: 400px;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+
+@media only screen and (max-width: 650px) {
+
+  .jumbotron {
+    max-height: 700px;
+  }
+
+  .fa-5x {
+    padding-top: 15px;
+  }
+
+  .circle {
+    max-height: 100px;
+    width: 100px;
+    border-radius: 50%;
+   }
+  textarea {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .jumbotron {
+    height: 650px;
+  }
+}
+
