@@ -1,22 +1,20 @@
 <div class="container col-md-8 col-md-offset-2">
-<p id="notice"><%= notice %></p>
-
-<h1><%= @milestone.date %></h1>
-<p class="text-center">Tagged with: <%= raw @milestone.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></p>
-<hr>
-
- <ul class="list-unstyled list-inline col-md-12">
-  <li class="back-button pull-left">
-    <%= link_to :back do %>
-      <i class="fa fa-arrow-left">Back</i>
-    <% end %>
-  </li>
-  <li class="edit-button pull-right">
-    <%= link_to edit_milestone_path(@milestone) do %>
-      <i class="fa fa-pencil">Edit</i>
-    <% end %>
-  </li>
-  </ul>
+  <p id="notice"><%= notice %></p>
+  <h1><%= @milestone.date %></h1>
+  <p class="text-center">Tagged with: <%= raw @milestone.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></p>
+  <hr>
+   <ul class="list-unstyled list-inline col-md-12">
+    <li class="back-button">
+      <%= link_to :back do %>
+        <i class="fa fa-arrow-left"> Back</i>
+      <% end %>
+    </li>
+    <li class="edit-button">
+      <%= link_to edit_milestone_path(@milestone) do %>
+        <i class="fa fa-pencil"> Edit</i>
+      <% end %>
+    </li>
+    </ul>
 
 <p class="milestone-post col-md-12"><%= @milestone.post %></p>
 
@@ -25,16 +23,18 @@
   <h2>Comments</h2>
   <%= form_for [@milestone, Comment.new] do |f| %>
       <p><%= f.label 'Leave a Comment' %> </p>
-        <%= f.text_area :content, class: 'comment-content' %>
-
+        <%= f.text_area :content %>
       <p><%= f.submit "Submit", class: 'btn btn-default comment-btn' %></p>
     <% end %>
 
     <% @milestone.comments.each do |comment| %>
       <div>
-        <strong><%= comment.user_name %></strong>
+        <hr>
+        <strong><%= comment.user.name %></strong>
         <p><%= comment.content %></p>
-        <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p><%= link_to comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } do %></p>
+          <i class="fa fa-times"></i>
+        <% end %>
       </div>
     <% end %>
   </div>
