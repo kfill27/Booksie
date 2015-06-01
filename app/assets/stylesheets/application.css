@@ -121,6 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 .testimonial-container {
   min-height: 400px;
   background-color: #37AAA0;
+  color: white;
 }
 
 .testimonial {
@@ -129,6 +130,26 @@ h1, h2, h3, h4, h5, h6 {
 
 h1<.testimonial {
   color: #fff;
+}
+
+.testimonial h3{
+  font-size: 2em;
+}
+
+.testimonial p{
+  font-size: 1.4em;
+}
+
+.testimonial {
+  position: relative; overflow: auto;
+}
+
+.testimonial li {
+  list-style: none;
+}
+
+.testimonial ul li {
+  float: left;
 }
 
 /*   Footer   */
