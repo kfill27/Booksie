@@ -1,23 +1,5 @@
 <%= render 'layouts/header' %>
 <div class="container col-md-8 col-md-offset-2">
-<<<<<<< HEAD
-<p id="notice"><%= notice %></p>
-<h1><%= @milestone.date %></h1>
-<p class="text-center">Tagged with: <%= raw @milestone.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></p>
-<hr>
- <ul class="list-unstyled list-inline col-md-12">
-  <li class="back-button pull-left">
-    <%= link_to :back do %>
-      <i class="fa fa-arrow-left">Back</i>
-    <% end %>
-  </li>
-  <li class="edit-button pull-right">
-    <%= link_to edit_milestone_path(@milestone) do %>
-      <i class="fa fa-pencil">Edit</i>
-    <% end %>
-  </li>
-  </ul>
-=======
   <p id="notice"><%= notice %></p>
   <h1><%= @milestone.date %></h1>
   <p class="text-center">Tagged with: <%= raw @milestone.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %></p>
@@ -34,7 +16,6 @@
       <% end %>
     </li>
     </ul>
->>>>>>> localchanges
 
 <p class="milestone-post col-md-12"><%= @milestone.post %></p>
 
