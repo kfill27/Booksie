@@ -1,7 +1,6 @@
 <%= render 'layouts/header' %>
 <div class="container">
 <div>
-<%= link_to "Back", :back, class: 'back-button' %>
 </div>
   <div class="add-users col-md-8 col-md-offset-2">
     <h3>Please enter the email of those who you would like to be able to view and contribute to your page: </h3>
@@ -10,6 +9,8 @@
       <%= submit_tag "Add Contributor", name: nil, class: 'btn btn-default' %>
     <% end %>
   </div>
+
+<hr>
 <div class="col-md-12">
 <h2 class="text-center">Edit <%= resource_name.to_s.humanize %></h2>
   <div class="col-md-6">

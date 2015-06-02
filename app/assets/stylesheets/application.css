@@ -32,11 +32,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Lato', sans-serif;
  }
 
-  h1 {
+h1 {
   text-align: center;
  }
 
- h2 {
+h2 {
   color: #EC523B;
 }
 
@@ -85,7 +85,8 @@ a#login{
 /*   Jumbotron   */
  .jumbotron {
     height: 400px;
-    background: url(congruent_pentagon.png);
+    /*background: url(yellowhoneycomb.pdf);*/
+    background-color: #87CCC6;
     background-size: cover;
     background-attachment: fixed;
  }
@@ -163,7 +164,7 @@ h1<.testimonial {
 
 /*   Footer   */
 .footer {
-  height: 70px;
+  height: 90px;
   background-color: #6E7070;
 }
 
@@ -231,6 +232,9 @@ img {
   max-width: 100%;
 }
 
+.thumbnail:hover {
+  border: 2px solid #D8B244;
+}
 
 /* Invite/Add Contributors */
 .add-users {
