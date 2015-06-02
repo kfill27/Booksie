@@ -56,6 +56,10 @@ h2 {
   color: #6E7070;
  }
 
+ ul.nav.navbar-nav.navbar-right.dropdown {
+  margin-top: 15px;
+ }
+
  #other-booksies {
   color: #fff;
  }
@@ -84,8 +88,8 @@ a#login{
 
 /*   Jumbotron   */
  .jumbotron {
-    height: 400px;
-    /*background: url(yellowhoneycomb.pdf);*/
+    height: 500px;
+    background: url(congruent_pentagon.png);
     background-color: #87CCC6;
     background-size: cover;
     background-attachment: fixed;
@@ -129,7 +133,7 @@ a#login{
 
 /*   Testimonials   */
 .testimonial-container {
-  min-height: 400px;
+  min-height: 300px;
   background-color: #37AAA0;
   color: white;
 }
@@ -164,7 +168,7 @@ h1<.testimonial {
 
 /*   Footer   */
 .footer {
-  height: 90px;
+  height: 70px;
   background-color: #6E7070;
 }
 
@@ -233,7 +237,7 @@ img {
 }
 
 .thumbnail:hover {
-  border: 2px solid #D8B244;
+  border: 1px solid #D8B244;
 }
 
 /* Invite/Add Contributors */
@@ -303,6 +307,12 @@ textarea {
   padding: 10px;
 }
 
+/*  Edit Page  */
+.add-users {
+  margin-top: 60px;
+  min-height: 400px;
+}
+
 /*.kyra {
   background-color: green;
 
@@ -323,12 +333,8 @@ textarea {
   color: #fff;
 }
 
-.btn < .footer {
-  padding-top: 0;
-}
-
-.learn-more {
-  padding-top: 0px;
+.social-media-section {
+  padding: 10px 0 0 60px;
 }
 
 .social-media {
@@ -336,7 +342,10 @@ textarea {
   padding-top: 20px;
 }
 
-
+#learn-more {
+  background-color: #D8B244;
+  margin: 10px auto;
+}
 
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */

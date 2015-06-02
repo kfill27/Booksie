@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     else
       flash[:notice] = "Added #{contributor.email} as a contributor"
     end
-      #redirect_to :back
+      redirect_to :back
   end
 
   def settings
