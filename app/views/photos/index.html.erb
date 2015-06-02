@@ -1,13 +1,17 @@
 <%= render 'layouts/header' %>
-<div class="container col-md-12">
-  <h1>Showing all things tagged with:</h1>
+<div class="container">
+  <h1>Norah</h1>
   <h2>Photos</h2>
-    <% @photos.each do |photo| %>
-  <div class="tagged-photos col-md-3">
-      <%= image_tag photo.image.url (:thumb) %>
-      <p><%= photo.date %></p>
-  </div>
-      <% end %>
+
+  <div class="clearfix"></div>
+  <div class="row">
+    <% @photos.each do |photo| %>
+      <div class="tagged-photos col-sm-3">
+          <%= image_tag photo.image.url(:thumb) %>
+          <p class="text-center"><%= photo.date %></p>
+      </div>
+    <% end %>
+  </div>
   <div class="tagged-videos col-md-12">
     <h2>Videos</h2>
       <hr>
@@ -19,8 +23,10 @@
     <h2>Milestones</h2>
     <hr>
       <% @milestones.each do |milestone| %>
-        <%= milestone.date %>
-        <%= milestone.post %>
+        <div class="milestone-show">
+          <p><strong><%= milestone.date.to_s(:long) %></strong></p>
+          <p><%= milestone.post %></p>
+        </div>
       <% end %>
   </div>
 </div>

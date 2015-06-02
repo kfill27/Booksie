@@ -250,8 +250,6 @@ img {
   padding: 20px;
 }
 
-/* */
-
 .showImage {
   max-height: 500px;
 }
@@ -305,6 +303,11 @@ textarea {
   color: #D8B244;
   opacity: 0.8;
   padding: 10px;
+}
+
+.milestone-show {
+  border: 1px solid #37AAA0;
+  padding: 10;
 }
 
 /*  Edit Page  */
