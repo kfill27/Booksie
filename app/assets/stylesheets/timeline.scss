@@ -39,6 +39,7 @@
 .timeline > li:after {
   clear: both;
 }
+
 /*need to get this section to invert from original float to the left*/
 .timeline > li > .timeline-panel {
   width: 96%;
@@ -170,4 +171,5 @@ ul.timeline > li > .timeline-panel:after {
   border-right-width: 14px;
   left: -14px;
   right: auto;
+}
 }

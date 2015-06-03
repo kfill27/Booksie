@@ -49,7 +49,7 @@ h2 {
  }
 
 .navbar {
-  margin-bottom: 0px;
+  margin-bottom: 0;
  }
 
 .navbar-nav>li>a{
@@ -142,7 +142,7 @@ a#login{
   margin-top: 50px;
 }
 
-h1 < .testimonial {
+h1 .testimonial {
   color: #fff;
 }
 
@@ -258,6 +258,7 @@ img {
   padding: 5px;
   margin: 10px;
 }
+
 .milestone-date {
   color: #EC523B;
 }
