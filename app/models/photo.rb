@@ -4,5 +4,6 @@ class Photo < ActiveRecord::Base
   mount_uploader :image, ImageUploader
   acts_as_taggable
   validates :image, presence: true
+  validates :date, presence: true
 end
 

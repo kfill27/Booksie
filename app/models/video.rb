@@ -4,6 +4,6 @@ class Video < ActiveRecord::Base
   mount_uploader :video, VideoUploader
   acts_as_taggable
   validates :video, presence: true
-
+  validates :date, presence: true
 
 end
