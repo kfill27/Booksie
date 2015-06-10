@@ -2,6 +2,8 @@ class UsersController < ApplicationController
   # before_action :check_invites, only: :profile
   before_action :authenticate_user!, except: [:landing]
 
+
+
   def landing
     @users = User.all
   end
@@ -11,6 +13,10 @@ class UsersController < ApplicationController
     if user_signed_in?
       render 'profile'
     end
+  end
+
+  def about
+
   end
 
   def contributor

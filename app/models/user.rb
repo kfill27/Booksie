@@ -28,6 +28,9 @@ class User < ActiveRecord::Base
     first_name + ' ' + last_name
   end
 
+  def about
+  end
+
   private
   def create_booksie_page
     booksie = self.booksie_pages.create

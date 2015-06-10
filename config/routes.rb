@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   devise_scope :user do
+    get 'aboutus' => 'users#about'
     authenticated :user do
       root 'booksie_pages#dashboard', as: :authenticated_root
     end
@@ -33,7 +34,6 @@ Rails.application.routes.draw do
 
   get 'contributor' => 'users#contributor'
   get 'tags/:tag', to: 'photos#index', as: :tag
-  get 'aboutus' => 'users#about'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
