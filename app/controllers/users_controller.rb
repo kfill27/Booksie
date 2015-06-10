@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   # before_action :check_invites, only: :profile
-  before_action :authenticate_user!, except: [:landing]
+  before_action :authenticate_user!, except: [:landing, :about]
 
 
 
