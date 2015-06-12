@@ -1,0 +1,389 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /*Booksie Colors:
+ yellow: #D8B244
+ red: #EC523B
+ teal: #37AAA0
+ light teal: #87CCC6;
+ gray: #6E7070
+ */
+
+/*   General Stuff   */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nixie One';
+ }
+
+ p, body {
+  font-family: 'Lato', sans-serif;
+ }
+
+h1 {
+  text-align: center;
+ }
+
+h2 {
+  color: #EC523B;
+}
+
+/*   Header   */
+ #logo {
+  color: #EC523B;
+  font-size: 50px;
+  font-family: "Lobster";
+  text-decoration: none;
+ }
+
+.navbar {
+  margin-bottom: 0px;
+ }
+
+.navbar-nav>li>a{
+  color: #6E7070;
+ }
+
+ ul.nav.navbar-nav.navbar-right.dropdown {
+  margin-top: 15px;
+ }
+
+ #other-booksies {
+  color: #fff;
+ }
+
+ #other-booksies:hover {
+  background-color: #87CCC6;
+  border: 0;
+ }
+
+ .nav li {
+  text-transform: uppercase;
+ }
+
+#login {
+  background-color: #D8B244;
+  border: 1px solid #D8B244;
+  border-radius: 3px;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+
+a#login{
+  margin-top: 30px;
+}
+
+/*   Jumbotron   */
+ .jumbotron {
+    height: 500px;
+    background: url(congruent_pentagon.png);
+    background-color: #87CCC6;
+    background-size: cover;
+    background-attachment: fixed;
+ }
+
+ .welcome-text {
+    padding-top: 50px;
+    color: #37AAA0;
+ }
+
+ input {
+  width: 100%;
+ }
+
+ input#user_first_name, input#user_last_name {
+  width: 100%;
+ }
+
+ .btn {
+  background-color: #37AAA0;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  margin: 20px 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+ }
+
+ .btn:hover {
+  background-color: #87CCC6;
+  color: #fff;
+ }
+
+/*   Supporting Area   */
+.supporting h1 {
+  margin-bottom: 30px;
+}
+
+.supporting p {
+  padding: 30px 0px;
+}
+
+.supporting-icon {
+  color: #EC523B;
+}
+
+/*   Testimonials   */
+.testimonial-container {
+  min-height: 300px;
+  background-color: #37AAA0;
+  color: white;
+}
+
+.testimonial {
+  margin-top: 50px;
+}
+
+h1<.testimonial {
+  color: #fff;
+}
+
+.testimonial h3{
+  font-size: 2em;
+}
+
+.testimonial p{
+  font-size: 1.4em;
+}
+
+.testimonial {
+  position: relative; overflow: auto;
+}
+
+.testimonial li {
+  list-style: none;
+}
+
+.testimonial ul li {
+  float: left;
+}
+
+/*   Footer   */
+.footer {
+  height: 70px;
+  background-color: #6E7070;
+}
+
+/**************************  Profile Page ***************************/
+/*.navbar-nav>li>a:first-child {
+  color: #fff;
+}*/
+
+.drop-pill {
+  border: 1px solid #37AAA0;
+  background-color: #37AAA0;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+a.drop-pill {
+  color: #fff;
+}
+
+
+/* Upload Section*/
+.add-media-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.fa-5x {
+  padding-top: 60px;
+  color: #fff;
+}
+
+a:focus, button:focus {
+  outline:0;
+}
+
+.circle {
+  background-color: #D8B244;
+  height: 200px;
+  max-width: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.circle:hover{
+  -webkit-animation-name: pulse;
+}
+
+/* Gallery */
+
+.taggable-tags {
+  border: 1px solid #37AAA0;
+  background-color: #37AAA0;
+  color: #fff;
+  padding: 10px 15px;
+  margin: 0 10px;
+  border-radius: 3px;
+}
+
+.taggable-tags a {
+    text-decoration: none;
+}
+
+img {
+  padding-top: 10px;
+  max-width: 100%;
+}
+
+.thumbnail:hover {
+  border: 1px solid #D8B244;
+}
+
+/* Invite/Add Contributors */
+.add-users {
+  display: inline-block;
+  padding: 30px;
+}
+
+.upload-button {
+  padding: 20px;
+}
+
+.showImage {
+  max-height: 500px;
+}
+
+.milestone {
+  padding: 5px;
+  margin: 10px;
+}
+.milestone-date {
+  color: #EC523B;
+}
+
+.milestone-icon {
+  color: #6E7070;
+  padding: 0 10px;
+}
+
+.milestone-icon:hover {
+  color: #ccc;
+}
+
+.supporting-icon {
+  color: #D8B244;
+}
+
+textarea {
+  width: 75%;
+  height: auto;
+}
+
+
+/* Show Pages */
+
+.back-button, .edit-button {
+  border: 1px solid #D8B244;
+  background-color: #D8B244;
+  border-radius: 3px;
+  padding: 5px 20px 5px 0;
+  color: #fff;
+  margin: 0 20px 0 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+ .back-button:hover, .edit-button:hover {
+  color: #fff;
+  background-color: #D8B244;
+}
+
+.fa-quote-left, .fa-quote-right {
+  color: #D8B244;
+  opacity: 0.8;
+  padding: 10px;
+}
+
+.milestone-show {
+  border: 1px solid #37AAA0;
+  padding: 10;
+}
+
+/*  Edit Page  */
+.add-users {
+  margin-top: 60px;
+  min-height: 400px;
+}
+
+/*.kyra {
+  background-color: green;
+
+}
+
+.marilu {
+  background-color: blue;
+
+}
+
+.taryn {
+
+}
+*/
+/*   Footer   */
+
+.footer {
+  color: #fff;
+}
+
+.social-media-section {
+  padding: 10px 0 0 60px;
+}
+
+.social-media {
+  color: #fff;
+  padding-top: 20px;
+}
+
+#learn-more {
+  background-color: #D8B244;
+  margin: 10px auto;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+
+@media only screen and (max-width: 650px) {
+
+  .jumbotron {
+    max-height: 700px;
+  }
+
+  .fa-5x {
+    padding-top: 15px;
+  }
+
+  .circle {
+    max-height: 100px;
+    width: 100px;
+    border-radius: 50%;
+   }
+  textarea {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .jumbotron {
+    height: 650px;
+  }
+}
+
